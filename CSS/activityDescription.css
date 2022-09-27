@@ -20,7 +20,6 @@
 .descriptionTitle{
     margin-top: 30px;
     margin-left: 20px;
-    align-items: flex-start;
     float: left;
 }
 
@@ -36,14 +35,25 @@
     border: 2px solid transparent;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    align-items: flex-start; /* groups stuff at the top */
     float: right; /*moves buttons to the right*/
     margin-top: 35px;
 
 }
 
+#descriptionDescription{
+    margin-top: 30px;
+    margin-left: 20px;
+    align-items: flex-start;
+
+}
+
 #descriptionText{
     text-align: center;
-    margin-top: 30%;
+    margin-top: 20%;
     margin-bottom: 30%;
+}
+
+#topBar{
+    align-items: flex-start;
+
 }
