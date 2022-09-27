@@ -2,6 +2,10 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 250px;
+    hight: 150px;
     /*width: 50%;*/
 
 }
@@ -36,8 +40,9 @@ h3 {
 
 .saveButton, .cancelButton {
     background-color: #64B81F;
+    color: white;
     border: 1px black;
-    padding: 5px;
+    padding: 10px;
     width: 100px;
     padding: 10px;
     margin: 50px;
@@ -46,6 +51,7 @@ h3 {
     font-size: 0.875rem;
     border-radius: 15px;
     align-self: center;
+    justify-content: center;
 
 }
 
