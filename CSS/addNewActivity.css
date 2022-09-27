@@ -2,7 +2,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /*width: 50%;*/
+
 
 }
 
@@ -42,7 +42,6 @@ h3 {
     padding: 10px;
     margin: 50px;
     margin-top: 25px;
-    /* font-size: 16px; */
     font-size: 0.875rem;
     border-radius: 15px;
     align-self: center;
