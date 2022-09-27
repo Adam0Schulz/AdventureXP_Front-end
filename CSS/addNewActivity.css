@@ -21,18 +21,17 @@
 }
 
 .description, .title {
-
-
     width: 100%;
     min-height: 30px;
     border-radius: 15px;
     border: 0px;
-}
-
-h3 {
-    margin: 1em auto;
 
 }
+.title{
+    margin-bottom:20px;
+}
+
+
 
 .buttonSave, .buttonCancel {
     text-align: center;
