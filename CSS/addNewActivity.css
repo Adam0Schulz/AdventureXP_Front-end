@@ -18,8 +18,10 @@
 .title{
     font-size: 1rem;
     margin-top: 10px;
+    margin-left: 20rem;
     text-transform: uppercase;
     letter-spacing: var(--spacing);
+    border-radius: 2rem;
 }
 
 .logo{
@@ -41,4 +43,13 @@
     margin-left:20px;
 
 
+
+}
+.description{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-left: 20rem;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    border-radius: 2rem;
 }
