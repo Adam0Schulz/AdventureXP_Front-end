@@ -1,0 +1,123 @@
+/*
+===============
+Font-families
+===============
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap');
+
+/*
+===============
+Global styles
+===============
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*
+    ===============
+    Colors
+    ===============
+    */
+
+    --light-blue: #D2ECFF;
+    --yellow: #FDC517;
+    --green: #64B81F;
+    --blue: #02A6FD;
+    --red: #E3260D;
+
+
+    /*
+    ===============
+    Font-sizes
+    ===============
+    */
+    --Small: 25px;
+    --Medium: 40px;
+    --Large: 60px;
+    --XLarge: 80px;
+
+    /*
+    ===============
+    Other styles
+    ===============
+    */
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*
+===============
+Global classes
+===============
+*/
+
+.btn {
+    background: var(--yellow);
+    color: black;
+    padding: 0.375rem 3.5rem;
+    display: inline-block;
+    transition: var(--transition);
+    font-size: 1.5rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    font-style: italic;
+}
+.btn:hover {
+   /* color: var(--clr-primary-1);
+    background: var(--clr-primary-8);*/
+}
+.welcome{
+    align-self: center;
+    width: 40rem;
+    height: 40rem;
+    background-color: var(--light-blue);
+    border-radius: 2rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
