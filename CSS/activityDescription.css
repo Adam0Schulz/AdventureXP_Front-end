@@ -1,5 +1,5 @@
 
-#textbox {
+#bluebox {
     border-radius: 25px; /* rounds the edges*/
     background: #D2ECFF;
     width: 50%;
@@ -11,7 +11,7 @@
     left: 25%;
     top: 25%;
     line-height: 1.5;
-    display: inline-block;
+    display: block;
     vertical-align: middle;
 
 
@@ -40,10 +40,12 @@
 
 }
 
-#descriptionDescription{
+#descriptionTitle{
     margin-top: 30px;
     margin-left: 20px;
+    margin-bottom: 20px;
     align-items: flex-start;
+    text-align: left
 
 }
 
@@ -53,7 +55,19 @@
     margin-bottom: 30%;
 }
 
+p {
+    font-size: x-large;
+}
+
 #topBar{
     align-items: flex-start;
 
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

@@ -92,7 +92,13 @@ Global classes
 
 
 
-
+#rcorners1 {
+    border-radius: 25px;
+    background: #02A6FD;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
 
 
 
