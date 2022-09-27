@@ -77,17 +77,16 @@ Global classes
    /* color: var(--clr-primary-1);
     background: var(--clr-primary-8);*/
 }
-.welcome{
+.bluebox{
     align-self: center;
-    width: 40rem;
-    height: 40rem;
+    width: 50rem;
+    height: 50rem;
     background-color: var(--light-blue);
     border-radius: 2rem;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 
