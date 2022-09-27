@@ -1,0 +1,12 @@
+.welcome{
+    align-self: center;
+    width: 40rem;
+    height: 40rem;
+    background-color: var(--light-blue);
+    border-radius: 2rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
