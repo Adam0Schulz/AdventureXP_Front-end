@@ -77,6 +77,15 @@ Global classes
    /* color: var(--clr-primary-1);
     background: var(--clr-primary-8);*/
 }
+.welcome{
+    align-self: center;
+    width: 400px;
+    height: 400px;
+    background-color: var(--light-blue);
+    border-radius: 20%;
+    color: red;
+
+}
 
 
 
