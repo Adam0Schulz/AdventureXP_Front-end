@@ -44,17 +44,23 @@
     /* font-size: 16px; */
     font-size: 0.875rem;
     align-self: center;
-    display: flex;
+    display: inline-block;
     justify-content: space-between;
     align-items: center;
 
-}
 
+}
+.saveButton{
+    margin-right: 10px;
+}
 .cancelButton {
     background-color: #FDC517;
+
 }
 .twobutton{
-    justify-content: space-between;
+
     padding: 20px;
-    display: flex;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
