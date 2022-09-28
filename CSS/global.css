@@ -75,9 +75,11 @@ a {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     height: 100vh;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -100,13 +102,14 @@ body {
 }
 .bluebox{
     align-self: center;
-    width: 50rem;
-    height: 50rem;
+    width: 45rem;
+    height: 45rem;
     padding: 4rem;
     background-color: var(--light-blue);
     border-radius: 2rem;
     color: black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
