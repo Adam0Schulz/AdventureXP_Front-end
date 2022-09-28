@@ -68,6 +68,18 @@ button{
     font-family: "Comic Neue", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
 .btn {
     background: var(--yellow);
     color: black;
@@ -84,11 +96,13 @@ button{
 .btn:hover {
    /* color: var(--clr-primary-1);
     background: var(--clr-primary-8);*/
+    transform: scale(1.1);
 }
 .bluebox{
     align-self: center;
     width: 50rem;
     height: 50rem;
+    padding: 4rem;
     background-color: var(--light-blue);
     border-radius: 2rem;
     color: black;

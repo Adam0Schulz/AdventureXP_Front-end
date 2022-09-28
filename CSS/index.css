@@ -1,13 +1,28 @@
+.bluebox {
+    max-width: 30rem;
+    max-height: 25rem;
+    position: relative;
+}
+
+.bluebox::before {
+    content: url("../img/AdventureXP_logo_transparent.png");
+    position: absolute;
+    top: -57%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+}
+
 .welcome{
-    align-self: center;
-    width: 40rem;
-    height: 40rem;
-    background-color: var(--light-blue);
-    border-radius: 2rem;
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+}
+
+.welcome_heading {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
 }
