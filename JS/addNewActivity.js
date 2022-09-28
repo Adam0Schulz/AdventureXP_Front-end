@@ -1,38 +1,34 @@
 //add save button with event listener
-const saveButton = document.getElementById(".saveButton");
+const saveButton = document.getElementById("saveButton");
 const url= "http://localhost:9090/activity";
-const name = document.getElementById(".title").value;
-const type = document.getElementById(".description").value;
+const nameTag = document.getElementById("title");
+const typeTag = document.getElementById("description");
 
+let name = ""
+let type = ""
+nameTag.addEventListener("change", (event) => {
+    name = event.target.value;
+});
+typeTag.addEventListener("change", (event) => {
+    type = event.target.value;
+});
 
-//fetch url
-fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        //
-
-
-
+//fetch url and save as post request
+saveButton.addEventListener("click", () => {
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            name: name,
+            description: type,
+        }),
     })
-    .catch(error => console.log(error))
-async function getAllData() {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        const table = data.data;
+        .then((response) => response.json())
 
-
-        table.forEach();
-
-        console.log(table);
-
-    }
-    catch (error) {
-        console.log(error)
-    }
 }
+);
 
-const DataInfo=getAllData();
-console.log(DataInfo)
 

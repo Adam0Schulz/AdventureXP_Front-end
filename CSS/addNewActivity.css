@@ -20,25 +20,25 @@
     border-radius: 15px;
 }
 
-.description, .title {
+#description, #title {
     width: 100%;
     min-height: 30px;
     border-radius: 15px;
     border: 0px;
 
 }
-.title{
+#title{
     margin-bottom:20px;
 }
 
 
 
 
-.buttonSave, .buttonCancel {
+#buttonSave, #buttonCancel {
     text-align: center;
 }
 
-.saveButton, .cancelButton {
+#saveButton, #cancelButton {
     background-color: #64B81F;
     color: white;
 
@@ -51,7 +51,7 @@
 
 }
 
-.cancelButton {
+#cancelButton {
     background-color: #FDC517;
 }
 .twobutton{
