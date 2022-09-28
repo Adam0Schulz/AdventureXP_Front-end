@@ -1,35 +1,42 @@
 .btnYes {
     background: #64B81F;
     color: white;
-    padding: 0.375rem 3.5rem;
-    display: inline-block;
+    padding: 0.5em 2em;
+    align-items: center;
+    justify-content: center;
     transition: var(--transition);
-    font-size: 1.5rem;
+    font-size: 0.875rem;
     border: 2px solid transparent;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     font-style: italic;
-    margin-right: 30px;
+    display: inline-block;
+    margin-right: 20px;
+
+
 }
 .btnNo {
     background: #E3260D;
     color: white;
-    padding: 0.375rem 3.5rem;
-    display: inline-block;
+    padding: 0.5em 2em;
+    align-items: center;
+    justify-content: center;
     transition: var(--transition);
-    font-size: 1.5rem;
+    font-size: 0.875rem;
     border: 2px solid transparent;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     font-style: italic;
+    display: inline-block;
 }
 
 .pStyle
 {
     font-style: italic;
     font-size: 25px;
+    text-align: center;
 
 }
 
@@ -37,16 +44,28 @@
 {
     color: #FDC517;
     font-size: 50px;
+    text-align: center;
 }
 
 .divStyle
 {
     text-align: center;
     width: 40rem;
-    height: 30rem;
-    background-color: lightblue;
+    height: 32rem;
+    background-color: white;
     margin-left: 450px;
     border-radius: 25px;
+    position: absolute;
+    z-index: 5;
+}
 
-
+.background
+{
+    color: black;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }

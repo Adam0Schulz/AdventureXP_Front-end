@@ -5,17 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../CSS/Global.css"  media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/global.css"  media="screen">
     <link rel="stylesheet" type="text/css" href="../CSS/activityDescription.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/DeleteActivityPop-up.css">
+    <script src="../JS/createNewPopup.js" defer></script>
+    <script
+            src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous"></script>
     <title>Description</title>
 </head>
 <body>
+
 <image src="../img/AdventureXP_logo_transparent.png" class="logo"  ></image>
 <div id="bluebox">
 
     <div id="topBar">
 
-    <button class="deleteButton" > <img src="../img/icons/cancel-icon.png"> Delete </button>
+    <button class="deleteButton" id="deleteActivityBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
     <button class="editButton"> <img src="../img/icons/edit-icon.png" style="margin-right: 5px"> Edit </button>
     <button class="backButton" > <img src="../img/icons/back-icon.png" style="margin-right: 5px">  Back </button>
     <h1 class="activityTitle">Go-kart</h1>
@@ -30,5 +37,6 @@
     </div>
 
 </div>
+<div id="cont"></div>
 </body>
 </html>
