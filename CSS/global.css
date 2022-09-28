@@ -60,6 +60,14 @@ Global classes
 ===============
 */
 
+h1,
+h2,
+h3,
+h4,
+button{
+    font-family: "Comic Neue", sans-serif;
+}
+
 .btn {
     background: var(--yellow);
     color: black;
@@ -70,24 +78,23 @@ Global classes
     border: 2px solid transparent;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    border-radius: 1rem;
+    border-radius: 2.7rem;
     font-style: italic;
 }
 .btn:hover {
    /* color: var(--clr-primary-1);
     background: var(--clr-primary-8);*/
 }
-.welcome{
+.bluebox{
     align-self: center;
-    width: 40rem;
-    height: 40rem;
+    width: 50rem;
+    height: 50rem;
     background-color: var(--light-blue);
     border-radius: 2rem;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .logo {
     display: block;
@@ -104,7 +111,13 @@ Global classes
 
 
 
-
+#rcorners1 {
+    border-radius: 25px;
+    background: #02A6FD;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
 
 
 
