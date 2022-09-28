@@ -33,6 +33,7 @@
 
 
 
+
 .buttonSave, .buttonCancel {
     text-align: center;
 }
@@ -44,23 +45,20 @@
     /* font-size: 16px; */
     font-size: 0.875rem;
     align-self: center;
-    display: inline-block;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 
+}
 
-}
-.saveButton{
-    margin-right: 10px;
-}
 .cancelButton {
     background-color: #FDC517;
-
 }
 .twobutton{
-
+    justify-content: space-between;
     padding: 20px;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
+}
+textarea{
+    padding-left: 8px;
 }

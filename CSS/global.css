@@ -96,16 +96,6 @@ button{
     justify-content: center;
     align-items: center;
 }
-
-
-
-#rcorners1 {
-    border-radius: 25px;
-    background: #02A6FD;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
-}
 .logo {
     display: block;
     margin-left: auto;
@@ -118,10 +108,16 @@ button{
 
 }
 
-.icon {
-    height: 16px;
-}
 
+
+
+#rcorners1 {
+    border-radius: 25px;
+    background: #02A6FD;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
 
 
 
