@@ -1,5 +1,5 @@
 .activity{
-    width: 14rem;
+    width: 100%;
     height: 10rem;
     background-color: var(--blue);
     border-radius: 2rem;
@@ -11,29 +11,49 @@
     font-size: 1.2rem;
 }
 
-.activities-container{
-    display: grid;
-    column-gap: 1rem;
-    row-gap: 1px;
-    grid-template-areas: 'myArea myArea myArea';
-    justify-content: space-evenly;
-    margin: 10rem auto auto;
-    margin-bottom: 1rem;
+.activities-box{
+    margin: 3rem 0;
+    width: 70rem;
+    padding: 4rem 10rem;
 }
 .logo{
     padding-top: 2rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+
 }
+
+.logo_cont {
+    width: 15rem;
+    margin: 0 auto;
+}
+
 .header{
-    grid-area: myArea;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 40px;
-    font-style: italic;
+}
+
+.header h1 {
+    font-size: var(--Medium);
 }
 .btn-activities{
     background-color: #64B81F;
     color: white;
+}
+
+.activities_cont {
+    overflow-y: scroll;
+    padding-right: 1rem;
+    scroll-behavior: smooth;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+
+    width: 100%;
+    margin-top: 5rem;
+
 }
