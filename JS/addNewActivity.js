@@ -39,6 +39,7 @@ saveButton.addEventListener("click", () => {
 
 
 
+
     fetch(url, {
         method: "POST",
         headers: {
@@ -54,8 +55,12 @@ saveButton.addEventListener("click", () => {
         //send the message about success or failure of the request
         .then((data) => {
             if (data.status === 400  || data.status === 402 || data.status=== null) {
+                //make a sound for success or failure
+
                 alert("Activity not added");
-            }   {
+
+            }else   {
+
                 alert("Activity successfully added");
             }
 
