@@ -15,6 +15,30 @@ typeTag.addEventListener("change", (event) => {
 
 //fetch url and save as post request
 saveButton.addEventListener("click", () => {
+    //name and type should not be empty
+    if (name === "" || type === "") {
+        alert("Please fill out all fields");
+        return;
+    }
+    if (name.length > 50) {
+        alert("Name is too long");
+        return;
+    }
+    //make sure name and type is correct english characters and grammar
+    if (!name.match(/^[a-zA-Z0-9 ]+$/)) {
+        alert("Name is not valid");
+        return;
+    }
+    if (!type.match(/^[a-zA-Z0-9 ]+$/)) {
+        alert("Type is not valid");
+        return;
+    }
+
+
+
+
+
+
     fetch(url, {
         method: "POST",
         headers: {
@@ -27,8 +51,19 @@ saveButton.addEventListener("click", () => {
         }),
     })
         .then((response) => response.json())
+        //send the message about success or failure of the request
+        .then((data) => {
+            if (data.status === 400  || data.status === 402 || data.status=== null) {
+                alert("Activity not added");
+            }   {
+                alert("Activity successfully added");
+            }
 
+        }
+        )
 }
 );
+
+
 
 
