@@ -33,7 +33,12 @@ saveButton.addEventListener("click", () => {
         alert("Type is not valid");
         return;
     }
-
+ //make shore is not save type with only numbers
+    if (type.match(/^[0-9]+$/)) {
+        alert("Type is not valid");
+        return;
+    }
+    //make a cancle buttton
 
     fetch(url, {
         method: "POST",
