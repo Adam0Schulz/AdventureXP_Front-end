@@ -2,7 +2,7 @@ let response = []
 const activitiesCont = document.querySelector('#activities_cont')
 
 async function fetchAll() {
-    return await fetch("http://localhost:9090/activities")
+    return await fetch("http://localhost:8080/activities")
         .then(response => response.json())
 }
 
