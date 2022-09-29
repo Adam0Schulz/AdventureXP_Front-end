@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/global.css"  media="screen">
     <link rel="stylesheet" type="text/css" href="../CSS/activityDescription.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../CSS/DeleteActivityPop-up.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/edit.html.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/addNewActivity.css">
     <script src="../JS/DeleteActivityPop-up.js" defer></script>
     <script src="../JS/fetchActivityDescriptions.js" defer></script>
     <script src="../JS/editActivityPop-up.js" defer></script>
@@ -20,15 +20,17 @@
 </head>
 <body>
 <div id="cont"></div>
-<image src="../img/AdventureXP_logo_transparent.png" class="logo"  ></image>
+<div class="logo_cont">
+    <img src="../img/AdventureXP_logo_transparent.png" class="logo" alt="AdventureXP logo" />
+</div>
 <div id="bluebox">
 
     <div id="topBar">
 
-    <button class="deleteButton" id="deleteActivityBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
-    <button class="editButton" id="editActivityBtn"> <img src="../img/icons/edit-icon.png" style="margin-right: 5px"> Edit </button>
+    <button class="btn small-btn deleteButton" id="deleteActivityBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
+    <button class="btn small-btn editButton" id="editActivityBtn"> <img src="../img/icons/edit-icon.png" style="margin-right: 5px"> Edit </button>
         <form action="activities.html">
-    <button class="backButton" > <img src="../img/icons/back-icon.png" style="margin-right: 5px">  Back </button>
+    <button class="btn small-btn backButton" > <img src="../img/icons/back-icon.png">  Back </button>
         </form>
 
         <div id="activityTitle">

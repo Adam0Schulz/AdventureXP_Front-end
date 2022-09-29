@@ -1,7 +1,14 @@
+body {
+    display: flex;
+    align-items: center;
+}
+
 .bluebox {
     max-width: 30rem;
     max-height: 25rem;
     position: relative;
+    min-height: auto;
+    min-width: auto;
 }
 
 .bluebox::before {

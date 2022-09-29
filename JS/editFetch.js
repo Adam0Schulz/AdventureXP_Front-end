@@ -1,8 +1,8 @@
 //add save button with event listener
-const saveButton = document.getElementById("editSaveButton");
+const saveButton = document.getElementById("saveButton");
 const url= "http://localhost:8080/edits/"+id;
-const nameTag = document.getElementById("editTitle");
-const typeTag = document.getElementById("editDescription");
+const nameTag = document.getElementById("title");
+const typeTag = document.getElementById("description");
 
 getMe()
 
@@ -36,13 +36,13 @@ btnConfirm.addEventListener('click', editActivity)
 
 
 
-const cancelButtonEdit = document.getElementById("editCancelButton");
+const cancelButtonEdit = document.getElementById("cancelButton");
 cancelButtonEdit.addEventListener("click", () => {
     //activity cancle or not
     //if yes, go back to the main page
     //if no, stay on the page
     if (confirm("Do you want to cancel?")) {
-        window.location.href = "activities.html";
+        window.location.href = "activity.html";
 
     }
 });
