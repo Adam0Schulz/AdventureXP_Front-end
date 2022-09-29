@@ -1,6 +1,6 @@
 //add save button with event listener
 const saveButton = document.getElementById("saveButton");
-const url= "http://localhost:9090/activity";
+const url= "http://localhost:8080/activity";
 const nameTag = document.getElementById("title");
 const typeTag = document.getElementById("description");
 
@@ -35,11 +35,6 @@ saveButton.addEventListener("click", () => {
     }
 
 
-
-
-
-
-
     fetch(url, {
         method: "POST",
         headers: {
@@ -68,6 +63,8 @@ saveButton.addEventListener("click", () => {
         )
 }
 );
+
+
 
 
 
