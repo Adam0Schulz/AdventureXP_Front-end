@@ -8,6 +8,8 @@
     <title>Add new Activity</title>
     <link rel="stylesheet" href="../CSS/global.css">
     <link rel="stylesheet" href="../CSS/addNewActivity.css">
+    <script rel="stylesheet" src="../JS/addNewActivity.js" defer></script>
+
 
 </head>
 
@@ -21,21 +23,27 @@ More activities without scrolling
 
 <body>
 
-    <img src="../img/AdventureXP_logo_transparent.png" class="logo" alt="logo" >
+    <a href="activities.html">
+    <img src="../img/AdventureXP_logo_transparent.png" class="logo" alt="logo">
+    </a>
 
 <div class="blueBox">
     <div class="titleText">
         <h3>Title</h3>
-        <textarea name="title" class="title" cols="30" rows="2"></textarea>
+
+        <textarea name="title" id="title" cols="30" rows="2"></textarea>
+
     </div>
     <div class="descriptionText">
         <h3>Description</h3>
-        <textarea class="description" name="description"  cols="30" rows="10"></textarea>
+
+        <textarea id="description" name="description"  cols="30" rows="10"></textarea>
+
     </div>
 
 <div class="twobutton">
-    <button class="saveButton btn"><img src="../img/icons/save-icon.png" alt=""><span >Save </span></button>
-    <button class="cancelButton btn"><img src="../img/icons/cancel-icon.png" alt="" ><span >Cancel </span></button>
+    <button id="saveButton" class="btn"><img src="../img/icons/save-icon.png" alt=""><span >Save </span></button>
+    <button id="cancelButton" class="btn"><img src="../img/icons/cancel-icon.png" alt="" ><span >Cancel </span></button>
 </div>
 
 </div>
