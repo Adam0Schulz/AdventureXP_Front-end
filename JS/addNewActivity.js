@@ -16,10 +16,10 @@ typeTag.addEventListener("change", (event) => {
 //make a cancle buttton cancle and go back to the main page
 const cancelButton = document.getElementById("cancelButton");
 cancelButton.addEventListener("click", () => {
-        //activity cancle or not
+        //activity cancel or not
         //if yes, go back to the main page
         //if no, stay on the page
-    if (confirm("Do you want to cancle?")) {
+    if (confirm("Do you want to cancel?")) {
         window.location.href = "activities.html";
 
     }
@@ -77,7 +77,6 @@ saveButton.addEventListener("click", () => {
                 alert("Activity not added");
 
             }else   {
-
 
                 confirm("Activity successfully added");
             }
