@@ -1,28 +1,37 @@
 //add save button with event listener
 const saveButton = document.getElementById("saveButton");
-const url= "http://localhost:8080/edits/{userId}";
+const url= "http://localhost:8080/edits/"+id;
 const nameTag = document.getElementById("title");
 const typeTag = document.getElementById("description");
 
-const param = new URLSearchParams(window.location.search);
-const urlId = param.get("id");
-const id = urlId - 1;
+getMe()
 
-getIt();
-
-function out(any){
-    console.log(any);
-}
-
-async function getIt(){
-    out("inside getIt()")
+async function getMe()
+{
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
-    nameTag.textContent = data[id].name;
-    typeTag.textContent = data[id].description;
+    nameTag.textContent = data.name
+    typeTag.textContent = data.description
 }
 
+async function editActivity()
+{
+    await fetch(url,{
+        method: 'PUL',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+    })
+        .then(data => {
+            if (data.status === 200) {
+                window.location.replace("activities.html")
+            }
+        })
+        .catch(err => console.log(err))
+
+}
+btnConfirm.addEventListener('click', editActivity)
 
 
 

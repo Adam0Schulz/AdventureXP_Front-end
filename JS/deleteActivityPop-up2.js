@@ -5,7 +5,7 @@ const btnConfirm = document.getElementById("confirm")
 const parameter = new URLSearchParams(window.location.search);
 const urlID = parameter.get("id")
 const id1 = urlID;
-const url = "http://localhost:9090/activities/" + id1
+const url = "http://localhost:8080/activities/" + id1
 
 getMe()
 
