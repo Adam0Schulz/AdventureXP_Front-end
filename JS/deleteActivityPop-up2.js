@@ -5,20 +5,21 @@ const btnConfirm = document.getElementById("confirm")
 const parameter = new URLSearchParams(window.location.search);
 const urlID = parameter.get("id")
 const id1 = urlID;
+const url = "http://localhost:9090/activities/" + id1
 
 getMe()
 
 async function getMe()
 {
-    const response = await fetch("http://localhost:8080/activities");
+    const response = await fetch(url);
     const data = await response.json();
     console.log(data);
-    activityName1.textContent = data[id1 - 1].name
+    activityName1.textContent = data.name
 }
 
 async function deleteActivity()
 {
-    await fetch("http://localhost:8080/activity/" + id1,{
+    await fetch(url,{
         method: 'DELETE',
         headers:{
             'Content-Type': 'application/json'
