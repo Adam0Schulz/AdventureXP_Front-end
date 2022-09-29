@@ -1,6 +1,6 @@
 //add save button with event listener
 const saveButton = document.getElementById("saveButton");
-const url= "http://localhost:8080/activity";
+const url= "http://localhost:9090/activity";
 const nameTag = document.getElementById("title");
 const typeTag = document.getElementById("description");
 
@@ -12,6 +12,14 @@ nameTag.addEventListener("change", (event) => {
 typeTag.addEventListener("change", (event) => {
     type = event.target.value;
 });
+
+//make a cancle buttton cancle and go back to the main page
+const cancelButton = document.getElementById("cancelButton");
+cancelButton.addEventListener("click", () => {
+        window.location.href = "activities.html";
+
+    }
+);
 
 //fetch url and save as post request
 saveButton.addEventListener("click", () => {
@@ -38,7 +46,7 @@ saveButton.addEventListener("click", () => {
         alert("Type is not valid");
         return;
     }
-    //make a cancle buttton
+
 
     fetch(url, {
         method: "POST",
