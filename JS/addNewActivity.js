@@ -1,6 +1,6 @@
 //add save button with event listener
 const saveButton = document.getElementById("saveButton");
-const url= "http://localhost:9090/activity";
+const url= "http://localhost:8080/activities";
 const nameTag = document.getElementById("title");
 const typeTag = document.getElementById("description");
 
@@ -16,10 +16,15 @@ typeTag.addEventListener("change", (event) => {
 //make a cancle buttton cancle and go back to the main page
 const cancelButton = document.getElementById("cancelButton");
 cancelButton.addEventListener("click", () => {
+        //activity cancle or not
+        //if yes, go back to the main page
+        //if no, stay on the page
+    if (confirm("Do you want to cancle?")) {
         window.location.href = "activities.html";
 
     }
-);
+});
+
 
 //fetch url and save as post request
 saveButton.addEventListener("click", () => {
@@ -46,6 +51,10 @@ saveButton.addEventListener("click", () => {
         alert("Type is not valid");
         return;
     }
+    if (name.match(/^[0-9]+$/)) {
+        alert("Number is not valid");
+        return;
+    }
 
 
     fetch(url, {
@@ -69,7 +78,8 @@ saveButton.addEventListener("click", () => {
 
             }else   {
 
-                alert("Activity successfully added");
+
+                confirm("Activity successfully added");
             }
 
         }
