@@ -1,12 +1,11 @@
-const apiUrl = "http://localhost:9090/activities"
 const activityName = document.querySelector(".activityTitle");
 const activityDescription = document.querySelector(".descriptionText");
 
 //Get id from URL sent by acitivities.html
 const param = new URLSearchParams(window.location.search);
 const urlId = param.get("id");
-const id = urlId - 1;
-
+const id = urlId;
+const apiUrl = "http://localhost:9090/activities/" + id
 getIt();
 
 function out(any){
@@ -18,6 +17,7 @@ async function getIt(){
     const response = await fetch(apiUrl);
     const data = await response.json();
     console.log(data);
-    activityName.textContent = data[id].name;
-    activityDescription.textContent = data[id].description;
+
+        activityName.textContent = data.name;
+        activityDescription.textContent = data.description;
 }
