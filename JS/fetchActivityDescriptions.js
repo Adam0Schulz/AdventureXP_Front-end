@@ -9,7 +9,7 @@ let data
 const param = new URLSearchParams(window.location.search);
 const urlId = param.get("id");
 const id = urlId;
-const apiUrl = "http://localhost:9090/activities/" + id
+const apiUrl = "http://localhost:8080/activities/" + id
 getIt();
 
 function out(any){
