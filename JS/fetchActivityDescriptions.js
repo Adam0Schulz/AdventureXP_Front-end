@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:8080/activities"
+const apiUrl = "http://localhost:9090/activities"
 const activityName = document.querySelector(".activityTitle");
 const activityDescription = document.querySelector(".descriptionText");
 
