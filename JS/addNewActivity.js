@@ -4,6 +4,9 @@ const url= "http://localhost:8080/activities";
 const nameTag = document.getElementById("title");
 const typeTag = document.getElementById("description");
 
+console.log(nameTag)
+
+
 let name = ""
 let type = ""
 nameTag.addEventListener("change", (event) => {
