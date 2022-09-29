@@ -1,9 +1,5 @@
-
 const activityName = document.querySelector(".activityTitle");
 const activityDescription = document.querySelector(".descriptionText");
-
-let activity
-let data
 
 //Get id from URL sent by acitivities.html
 const param = new URLSearchParams(window.location.search);
@@ -24,14 +20,4 @@ async function getIt(){
 
         activityName.textContent = data.name;
         activityDescription.textContent = data.description;
-
-}
-
-
-function getId() {
-    console.log(data.id)
-    console.log(id)
-    if (data.id === id) {
-        activity = data
-    }
 }
