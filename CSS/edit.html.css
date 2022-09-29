@@ -1,13 +1,16 @@
-img {
-    height: 100px;
+.logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 250px;
+    hight: 150px;
     /*width: 50%;*/
 
 }
 
-.value {
+.blueBox {
     background-color: #D2ECFF;
     margin-top: 3%;
     height: 400px;
@@ -17,39 +20,45 @@ img {
     border-radius: 15px;
 }
 
-input,
-textarea
-{
+#editDescription, #editTitle ,#id{
     width: 100%;
     min-height: 30px;
     border-radius: 15px;
     border: 0px;
-}
-
-h3 {
-    margin: 1em auto;
 
 }
+#ediTitle{
+    margin-bottom:20px;
+}
 
-.buttons {
+
+
+
+#buttonSave, #buttonCancel {
     text-align: center;
 }
 
-#save, #cancel {
+#editSaveButton, #editCancelButton {
     background-color: #64B81F;
-    border: 1px black;
-    padding: 5px;
-    width: 100px;
-    padding: 10px;
-    margin: 10px;
-    margin-top: 25px;
+    color: white;
+
     /* font-size: 16px; */
     font-size: 0.875rem;
-
-    border-radius: 15px;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
-#cancel {
+#editCancelButton {
     background-color: #FDC517;
+}
+.twobutton{
+    justify-content: space-between;
+    padding: 20px;
+    display: flex;
+}
+textarea{
+    padding-left: 8px;
 }
