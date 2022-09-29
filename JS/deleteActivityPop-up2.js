@@ -4,7 +4,7 @@ const btnConfirm = document.getElementById("confirm")
 
 const parameter = new URLSearchParams(window.location.search);
 const urlID = parameter.get("id")
-const id1 = urlID - 1;
+const id1 = urlID;
 
 getMe()
 
@@ -13,10 +13,8 @@ async function getMe()
     const response = await fetch("http://localhost:8080/activities");
     const data = await response.json();
     console.log(data);
-    activityName1.textContent = data[id1].name
+    activityName1.textContent = data[id1 - 1].name
 }
-
-console.log(id1)
 
 async function deleteActivity()
 {
