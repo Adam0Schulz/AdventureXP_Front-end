@@ -1,5 +1,6 @@
 const activityName1 = document.getElementById("deleteActivityName")
 const btnConfirm = document.getElementById("confirm")
+const btnCancel = document.getElementById("cancel")
 
 
 const parameter = new URLSearchParams(window.location.search);
@@ -34,5 +35,11 @@ async function deleteActivity()
 
 }
 
+function cancel()
+{
+    window.location.replace("activities.html")
+}
+
 btnConfirm.addEventListener('click', deleteActivity)
+btnCancel.addEventListener('click', cancel)
 
