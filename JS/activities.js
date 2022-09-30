@@ -1,5 +1,5 @@
 
-import { getAllActivities, deleteActivityById } from "./Service/API_calls.js";
+import { getAllActivities  } from "./Service/API_calls.js";
 
 const activitiesCont = document.querySelector('#activities_cont')
 
@@ -15,8 +15,6 @@ getAllActivities().then(r => {
         activitiesCont.appendChild(a)
     })
 })
-
-deleteActivityById(5).then(r => console.log(r))
 
 
 
