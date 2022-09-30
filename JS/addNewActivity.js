@@ -21,7 +21,6 @@ cancelButton.addEventListener("click", () => {
         //if no, stay on the page
     if (confirm("Do you want to cancel?")) {
         window.location.href = "activities.html";
-
     }
 });
 
