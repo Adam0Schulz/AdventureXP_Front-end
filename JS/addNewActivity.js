@@ -22,7 +22,7 @@ cancelButton.addEventListener("click", () => {
         //activity cancle or not
         //if yes, go back to the main page
         //if no, stay on the page
-    if (confirm("Do you want to cancle?")) {
+    if (confirm("Do you want to cancel?")) {
         window.location.href = "activities.html";
 
     }
