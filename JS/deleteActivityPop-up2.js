@@ -37,7 +37,7 @@ async function deleteActivity()
 
 function cancel()
 {
-    window.location.replace("activities.html")
+    window.location.replace("activityDescription.html?id=" + id1)
 }
 
 btnConfirm.addEventListener('click', deleteActivity)
