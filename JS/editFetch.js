@@ -36,7 +36,10 @@ saveButton.addEventListener('click', (e) => {
             "id": id,
             "name": nameTag.value,
             "description": typeTag.value
-        })
+        }
+
+        )
+        window.location.href = "activityDescription.html?id=" + id;
     } else {
         alert("You cannot save an empty activity")
     }
