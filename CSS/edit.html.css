@@ -20,14 +20,14 @@
     border-radius: 15px;
 }
 
-#description, #title ,#id{
+#editDescription, #editTitle ,#id{
     width: 100%;
     min-height: 30px;
     border-radius: 15px;
     border: 0px;
 
 }
-#title{
+#ediTitle{
     margin-bottom:20px;
 }
 
@@ -38,7 +38,7 @@
     text-align: center;
 }
 
-#saveButton, #cancelButton {
+#editSaveButton, #editCancelButton {
     background-color: #64B81F;
     color: white;
 
@@ -51,7 +51,7 @@
 
 }
 
-#cancelButton {
+#editCancelButton {
     background-color: #FDC517;
 }
 .twobutton{
