@@ -1,12 +1,10 @@
-let response = []
+
+import { getAllActivities, deleteActivityById } from "./Service/API_calls.js";
+
 const activitiesCont = document.querySelector('#activities_cont')
 
-async function fetchAll() {
-    return await fetch("http://localhost:8080/activities")
-        .then(response => response.json())
-}
-
-fetchAll().then(r => {
+getAllActivities().then(r => {
+    console.log("hello1")
     r.forEach(item => {
         let a = document.createElement("a")
         a.href = "activityDescription.html?id=" + item.id
@@ -17,6 +15,9 @@ fetchAll().then(r => {
         activitiesCont.appendChild(a)
     })
 })
+
+deleteActivityById(5).then(r => console.log(r))
+
 
 
 
