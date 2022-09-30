@@ -5,28 +5,32 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../CSS/global.css"  media="screen">
-    <link rel="stylesheet" type="text/css" href="../CSS/activityDescription.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="../CSS/DeleteActivityPop-up.css">
-    <script src="../JS/DeleteActivityPop-up.js" defer></script>
-    <script src="../JS/fetchActivityDescriptions.js" defer></script>
     <script
             src="https://code.jquery.com/jquery-3.6.1.js"
             integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/global.css"  media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/activityDescription.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/DeleteActivityPop-up.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/addNewActivity.css">
+    <script src="../JS/DeleteActivityPop-up.js" defer></script>
+    <script src="../JS/fetchActivityDescriptions.js" defer></script>
+    <script src="../JS/editActivityPop-up.js" defer></script>
     <title>Description</title>
 </head>
 <body>
 <div id="cont"></div>
-<image src="../img/AdventureXP_logo_transparent.png" class="logo"  ></image>
+<div class="logo_cont">
+    <a href="../index.html"><img src="../img/AdventureXP_logo_transparent.png" class="logo" alt="Logo"></a>
+</div>
 <div id="bluebox">
 
     <div id="topBar">
 
-    <button class="deleteButton" id="deleteActivityBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
-    <button class="editButton"> <img src="../img/icons/edit-icon.png" style="margin-right: 5px"> Edit </button>
+    <button class="btn small-btn deleteButton" id="deleteActivityBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
+    <button class="btn small-btn editButton" id="editActivityBtn"> <img src="../img/icons/edit-icon.png"> Edit </button>
         <form action="activities.html">
-    <button class="backButton" > <img src="../img/icons/back-icon.png" style="margin-right: 5px">  Back </button>
+    <button class="btn small-btn backButton" > <img src="../img/icons/back-icon.png">  Back </button>
         </form>
 
         <div id="activityTitle">

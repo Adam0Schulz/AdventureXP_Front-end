@@ -12,23 +12,11 @@
 }
 
 .activities-box{
-    margin: 3rem 0;
-    width: 70rem;
-    padding: 4rem 10rem;
-}
-.logo{
-    padding-top: 2rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 
-.logo_cont {
-    width: 15rem;
-    margin: 0 auto;
-}
+
 
 .header{
     width: 100%;
@@ -40,8 +28,7 @@
     font-size: var(--Medium);
 }
 .btn-activities{
-    background-color: #64B81F;
-    color: white;
+    background-color: var(--green);
 }
 
 .activities_cont {

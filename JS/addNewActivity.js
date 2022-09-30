@@ -4,6 +4,9 @@ const url= "http://localhost:8080/activities";
 const nameTag = document.getElementById("title");
 const typeTag = document.getElementById("description");
 
+console.log(nameTag)
+
+
 let name = ""
 let type = ""
 nameTag.addEventListener("change", (event) => {
@@ -16,11 +19,12 @@ typeTag.addEventListener("change", (event) => {
 //make a cancle buttton cancle and go back to the main page
 const cancelButton = document.getElementById("cancelButton");
 cancelButton.addEventListener("click", () => {
-        //activity cancel or not
+        //activity cancle or not
         //if yes, go back to the main page
         //if no, stay on the page
-    if (confirm("Do you want to cancel?")) {
+    if (confirm("Do you want to cancle?")) {
         window.location.href = "activities.html";
+
     }
 });
 
@@ -77,7 +81,9 @@ saveButton.addEventListener("click", () => {
 
             }else   {
 
-                confirm("Activity successfully added");
+
+                alert("Activity successfully added");
+                window.location.href = "activities.html";
             }
 
         }

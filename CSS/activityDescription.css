@@ -1,9 +1,9 @@
 
 #bluebox {
     border-radius: 25px; /* rounds the edges*/
-    background: #D2ECFF;
+    background: var(--light-blue);
     width: 50%;
-    padding: 20px;
+    padding: 3rem;
     height: 550px;
     margin: auto;
     text-align: center;
@@ -19,7 +19,6 @@
 
 #activityTitle{
     margin-top: 30px;
-    margin-left: 20px;
     float: left;
 }
 
@@ -36,7 +35,7 @@
     text-align: center;
     margin-top: 20%;
     margin-bottom: 30%;
-    margin-left: 20px;
+
     margin-right: 20px;
 }
 
@@ -48,18 +47,6 @@ p {
 
 #topBar{
     align-items: flex-start;
-
-}
-
-.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width:  250px;
-    height: 150px;
-
 
 }
 
@@ -81,7 +68,6 @@ p {
     border-radius: 1rem;
     font-style: italic;
     margin-right: 5px;
-    width: 110px;
     height: 38px;
 
 
@@ -106,7 +92,6 @@ p {
     border-radius: 1rem;
     font-style: italic;
     margin-right: 5px;
-    width: 110px;
     height: 38px;
 
 
@@ -130,7 +115,6 @@ p {
     border-radius: 1rem;
     font-style: italic;
     margin-right: 5px;
-    width: 110px;
     height: 38px;
 
 }
