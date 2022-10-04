@@ -1,21 +1,37 @@
 //find all url in the activities
 const url = 'http://localhost:8080'
 const urlAddActivity= url+"/activities";
-const urlReadAll = url + "/activities";
-const urlDeletActivity = url+"/activities/" + id1
+const urlReadAllActivity = url + "/activities";
+const urlDeleteActivity = url+"/activities/" + id1
 const urlEditActivity = url+"/activities/" + id1
-const urlReadById = url + "/activities/" + id1;
+const urlReadByIdActivity = url + "/activities/" + id1;
 
 
 //find all customers
-const urlReadAll= url +"/customers";
-const urlFindById=url+"/customers/" + id;
+const urlReadAllCustomers= url +"/customers";
+const urlFindByIdCustomers=url+"/customers/" + id;
 const urlCreatCustomer=url+"/customers/";
-const urlUpdateById=url+"/customers/" + id;
-const urlDeletById=url+"/customers/" + id;
-const urlFindByKeyword=url+"/customers/search" + keyword;
+const urlUpdateByIdCustomers=url+"/customers/" + id;
+const urlDeleteByIdCustomers=url+"/customers/" + id;
+const urlFindByKeywordCustomers=url+"/customers/search" + keyword;
 
-//find all
+//find all bookings
+const urlReadAllBookings= url +"/bookings";
+const urlFindByIdBookings=url+"/bookings/" + id2;
+const urlCreatBooking=url+"/bookings/";
+const urlUpdateByIdBookings=url+"/bookings/" + id2;
+const urlDeleteByIdBookings=url+"/bookings/" + id2;
+const urlFindByKeywordBookings=url+"/bookings/search" + keyword;
+
+//find all instructors
+const urlReadAllInstructors= url +"/instructors";
+const urlFindByIdInstructors=url+"/instructors/" + id3;
+const urlCreatInstructor=url+"/instructors/";
+const urlUpdateByIdInstructors=url+"/instructors/" + id3;
+const urlDeleteByIdInstructors=url+"/instructors/" + id3;
+const urlFindByKeywordInstructors=url+"/instructors/search" + keyword;
+
+
 
 //Get id from URL sent by acitivities.html
 const paramActivity = new URLSearchParams(window.location.search);
