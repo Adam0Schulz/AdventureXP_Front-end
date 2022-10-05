@@ -16,7 +16,7 @@ export async function deleteById(id, resource) {
     })
         .then(response => {
             if(response.status===200){
-                return  "succesfully deleted item"
+                return  "successfully deleted item"
             }
             return response.status
         })
@@ -54,11 +54,15 @@ export async function create(body,resource){
     })
         .then(response => {
             if(response.status===200){
-                return  "succesfully created item"
+                return  "successfully created item"
             }
             return response.status
         })
         .catch(err => console.log(err))
+}
+export async function search(keyword,resource){
+    return fetch(url + '/'+ resource+'/search/' + keyword)
+        .then(response => response.json())
 }
 
 
