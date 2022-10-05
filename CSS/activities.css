@@ -16,14 +16,6 @@
     padding-right: 10rem;
 }
 
-
-
-.header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
 .header h1 {
     font-size: var(--Medium);
 }

@@ -151,6 +151,11 @@ body {
     border-radius: var(--Medium);
 }
 
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
 .background
 {

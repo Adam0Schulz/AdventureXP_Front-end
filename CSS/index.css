@@ -5,7 +5,7 @@ body {
 
 .bluebox {
     max-width: 30rem;
-    max-height: 25rem;
+    max-height: 30rem;
     position: relative;
     min-height: auto;
     min-width: auto;
@@ -14,7 +14,7 @@ body {
 .bluebox::before {
     content: url("../img/AdventureXP_logo_transparent.png");
     position: absolute;
-    top: -57%;
+    top: -48%;
     left: 50%;
     transform: translate(-50%, 50%);
 
@@ -31,5 +31,9 @@ body {
 
 .welcome_heading {
     margin-top: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+}
+
+.btn:first-of-type {
+    margin-bottom: 2rem;
 }

@@ -1,0 +1,108 @@
+* {
+    --activity-column-width: 8em;
+}
+
+
+.btn-bookings {
+    background-color: var(--green);
+}
+
+.header > div {
+    display: flex;
+    min-width: 40%;
+    justify-content: space-between;
+}
+
+.search_input_cont {
+    position: relative;
+}
+
+.search_input {
+    border-radius: 5em;
+    border: none;
+    width: 40ch;
+    padding: 1em;
+    position: relative;
+}
+
+.search_input_cont::after {
+    content: url('../img/icons/magnifying_glass-icon.png');
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.5em;
+    width: 1em;
+    height: 1em;
+}
+
+.calendar_cont {
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 2em;
+    margin-top: 2em;
+    padding: 2em;
+}
+
+.calendar_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.calendar_body {
+    position: relative;
+
+}
+
+.timeline_segments {
+    position: absolute;
+    left: var(--activity-column-width);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.timeline_segments div {
+    width: 0;
+    height: 100%;
+    border: 2px dashed black;
+
+}
+
+.timeline_segments div::before {
+    content: '10:00';
+    display: block;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -100%);
+    font-size: 1em;
+}
+
+.activity_row {
+    display: flex;
+    width: 100%;
+}
+
+.activity_column {
+    background-color: red;
+    width: var(--activity-column-width);
+}
+
+.row-timeline {
+    /*background-color: blue;*/
+    width: calc(100% - var(--activity-column-width));
+    position: relative;
+}
+
+.booking_block {
+    background-color: green;
+    width: 8em;
+    position: absolute;
+    left: 50%;
+}
