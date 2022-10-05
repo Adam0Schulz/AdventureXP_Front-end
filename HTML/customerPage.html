@@ -11,11 +11,14 @@
             integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../CSS/global.css">
-    <link rel="stylesheet" href="../CSS/activities.css">
-    <link rel="stylesheet" href="../CSS/addNewActivity.css">
+    <link rel="stylesheet" href="../CSS/customerPage.css">
 
-    <script src="../JS/activities.js" type="module" defer></script>
-    <script src="../JS/createNewActivityPopup.js" defer></script>
+
+    <script src="../JS/Service/API_calls.js" type="module" defer></script>
+    <script src="../JS/customerPage.js"  type="module"></script>
+
+
+
 
 
 </head>
@@ -25,18 +28,18 @@
 <div class="logo_cont">
     <a href="../index.html"><img src="../img/AdventureXP_logo_transparent.png" class="logo" alt="Logo"></a>
 </div>
-<div class="bluebox activities-box">
+<div class="bluebox customers_box">
 
     <div class="header">
-        <h1>Activities</h1>
-        <button class="btn small-btn btn-activities" id="addBtn"><img src="../img/icons/add-icon.png" />new</button>
+        <h1>Customers</h1>
+        <button class="btn small-btn btn-customers" id="addBtn"><img src="../img/icons/add-icon.png" />new</button>
     </div>
-    <div class="activities_cont" id="activities_cont">
+    <div class="customers_cont" id="customers_cont">
 
     </div>
 
 </div>
 
-<script src="../JS/fetchActivityDescriptions.js"></script>
+
 </body>
 </html>
