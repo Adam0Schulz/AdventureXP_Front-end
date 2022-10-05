@@ -1,9 +1,9 @@
 
-import { getAllActivities  } from "./Service/API_calls.js";
+import { getAll  } from "./Service/API_calls.js";
 
 const activitiesCont = document.querySelector('#activities_cont')
 
-getAllActivities().then(r => {
+getAll("activities").then(r => {
     console.log("hello1")
     r.forEach(item => {
         let a = document.createElement("a")
@@ -11,6 +11,7 @@ getAllActivities().then(r => {
         let div = document.createElement("div")
         div.className = "activity"
         div.innerText = item.name
+
         a.appendChild(div)
         activitiesCont.appendChild(a)
     })
