@@ -1,4 +1,3 @@
-
 #bluebox {
     border-radius: 25px; /* rounds the edges*/
     background: var(--light-blue);
@@ -17,7 +16,7 @@
 
 }
 
-#activityTitle{
+#bookingTitle{
     margin-top: 30px;
     float: left;
 }
@@ -37,6 +36,18 @@
     margin-bottom: 30%;
 
     margin-right: 20px;
+}
+.booking_cont {
+    overflow-y: scroll;
+    padding-right: 1rem;
+    scroll-behavior: smooth;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 5rem;
+
 }
 
 p {
@@ -93,6 +104,8 @@ p {
     font-style: italic;
     margin-right: 5px;
     height: 38px;
+
+
 }
 
 .deleteButton{
@@ -116,4 +129,12 @@ p {
     height: 38px;
 
 }
+.booking{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 200px;
+    margin-left: 150px
+;
 
+}
