@@ -48,10 +48,7 @@ export async function create(body,resource){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(body
-
-
-        )
+        body: JSON.stringify(body)
     })
         .then(response => {
             if(response.status===200){

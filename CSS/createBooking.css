@@ -1,0 +1,167 @@
+#firstName{
+    width: 45%;
+    min-height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 1em;
+    height: 2.575rem;
+}
+#firstNameDiv
+{
+    margin-top: 3rem;
+}
+
+#lastName{
+    width: 245px;
+    min-height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 1em;
+    height: 2.575rem;
+}
+#lastNameDiv
+{
+    margin-left: 18.8rem;
+    margin-top: -4rem;
+    margin-bottom: 2rem;
+}
+
+#phone{
+    width: 45%;
+    min-height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 1em;
+    height: 2.575rem;
+}
+#e-mail{
+    width: 245px;
+    min-height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 1em;
+    height: 2.575rem;
+    margin-bottom: 1.750rem;
+}
+
+#e-mailDiv
+{
+    margin-left: 18.8rem;
+    margin-top: -4rem;
+    margin-bottom: 0.75rem;
+}
+
+#activity{
+    width: 45%;
+    min-height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 1em;
+    height: 2.575rem;
+}
+
+#participants{
+    width: 245px;
+    min-height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 1em;
+    height: 2.575rem;
+    margin-bottom: 1.750rem;
+}
+
+#participantsDiv
+{
+    margin-left: 18.8rem;
+    margin-top: -4rem;
+    margin-bottom: 0.75rem;
+}
+
+#date
+{
+    width: 146px;
+    min-height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 1em;
+    height: 2.575rem;
+}
+
+#startTime
+{
+    width: 146px;
+    min-height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 1em;
+    height: 2.575rem;
+}
+
+#startTimeDiv
+{
+    margin-left: 12rem;
+    margin-top: -3.95rem;
+}
+
+#endTime
+{
+    width: 146px;
+    min-height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 1em;
+    height: 2.575rem;
+}
+
+#endTimeDiv
+{
+    margin-left: 25rem;
+    margin-top: -3.95rem;
+}
+
+.blueDiv {
+    background-color: var(--light-blue);
+    border-radius: 2rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 35vw;
+    min-height: 30rem;
+    min-width: 55rem;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+.popup
+{
+    position: absolute;
+    z-index: 5;
+    padding: 3rem;
+    min-width: 40rem;
+    min-height: 35rem;
+    width: 30vw;
+    height: inherit;
+    display: block;
+    margin: 0;
+    border-radius: var(--Medium);
+}
+
+.twoButton{
+    justify-content: space-between;
+    padding: 20px;
+    display: flex;
+    width: 19rem;
+    margin-left: 16rem;
+    margin-top: -3.425rem;
+}
+
+.saveButton
+{
+    background-color: var(--green);
+}
+.cancelButton {
+    background-color: var(--yellow);
+}
