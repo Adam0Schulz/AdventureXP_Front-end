@@ -2,12 +2,10 @@
 import { getAllActivities  } from "./Service/API_calls.js";
 
 const activitiesCont = document.querySelector('#activities_cont')
-console.log(getAllActivities())
-getAllActivities().then(r => {
-    r.forEach(item => {
-        console.log(item.name)
-        console.log(item)
 
+getAllActivities().then(r => {
+    console.log("hello1")
+    r.forEach(item => {
         let a = document.createElement("a")
         a.href = "activityDescription.html?id=" + item.id
         let div = document.createElement("div")
@@ -19,9 +17,6 @@ getAllActivities().then(r => {
         a.appendChild(div)
         activitiesCont.appendChild(a)
     })
-
-    //div.style.backgroundImage = "linear-gradient(45deg, rgba(2, 166, 253, 0.73), rgba(2, 166, 253, 0.73)), url(../img/activity-images/" + item.imageName + ")"
-
 })
 
 
