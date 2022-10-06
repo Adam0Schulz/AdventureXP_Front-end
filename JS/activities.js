@@ -1,10 +1,9 @@
 
-import { getAllActivities  } from "./Service/API_calls.js";
+import { getAll  } from "./Service/API_calls.js";
 
 const activitiesCont = document.querySelector('#activities_cont')
 
-getAllActivities().then(r => {
-    console.log("hello1")
+getAll("activities").then(r => {
     r.forEach(item => {
         let a = document.createElement("a")
         a.href = "activityDescription.html?id=" + item.id
