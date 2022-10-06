@@ -6,7 +6,7 @@ const param = new URLSearchParams(window.location.search);
 const urlId = param.get("id");
 const id = urlId;
 const apiUrl = "http://localhost:8080/activities/" + id
-getIt();
+
 
 function out(any){
     console.log(any);
@@ -21,3 +21,4 @@ async function getIt(){
         activityName.textContent = data.name;
         activityDescription.textContent = data.description;
 }
+getIt();
