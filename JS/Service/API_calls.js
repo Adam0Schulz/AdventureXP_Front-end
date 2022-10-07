@@ -1,4 +1,4 @@
-
+console.log("hello2")
 const url = 'http://localhost:8080'
 
 export async function getAll(resource) {
@@ -48,10 +48,7 @@ export async function create(body,resource){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(body
-
-
-        )
+        body: JSON.stringify(body)
     })
         .then(response => {
             if(response.status===200){
@@ -72,6 +69,22 @@ export async function getActivityBookings(id) {
         .catch(err => console.log(err))
 }
 
+export async function createWithParam(body,resource,[parameterName, parameterValue]){
+    return fetch(url + '/'+ resource+'/' + "?" + parameterName + "=" + parameterValue, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+    })
+        .then(response => {
+            if(response.status===200){
+                return  "successfully created item"
+            }
+            return response.status
+        })
+        .catch(err => console.log(err))
+}
 
 
 
