@@ -11,7 +11,7 @@
 .activity{
     width: 100%;
     height: 10rem;
-    background-size: cover;
+    background-color: var(--blue);
     border-radius: 2rem;
     color: white;
     display: flex;
@@ -31,12 +31,6 @@
     padding-right: 10rem;
 }
 
-.header{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .header h1 {
     font-size: var(--Medium);
 }
@@ -52,6 +46,7 @@
     grid-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
+
     width: 100%;
     margin-top: 5rem;
 
