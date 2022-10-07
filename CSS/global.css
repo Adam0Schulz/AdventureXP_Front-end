@@ -110,7 +110,8 @@ body {
 
 
 .bluebox{
-    background-color: var(--light-blue);
+   background-color: var(--light-blue);
+   /* background-color: transparent;*/
     border-radius: 2rem;
     color: black;
     display: flex;
@@ -164,6 +165,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: 10;
+
 }
 
 
