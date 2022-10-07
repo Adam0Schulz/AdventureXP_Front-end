@@ -52,9 +52,7 @@ saveBooking.addEventListener('click', () =>
     newBooking.startTime = startTime.value
     newBooking.endTime = endTime.value
     newBooking.numberOfParticipants = participants.value
-    newBooking.customer = newCustomer.value
-    console.log(newCustomer)
-    create(newCustomer, "customers").then(customer => newBooking.customer = customer)
+    newBooking.customer = newCustomer
     createWithParam(newBooking, "bookings", ["activityId", activityId]).then(window.location.replace("bookings.html"))
 })
 
