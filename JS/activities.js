@@ -4,6 +4,7 @@ import { getAll  } from "./Service/API_calls.js";
 const activitiesCont = document.querySelector('#activities_cont')
 
 getAll("activities").then(r => {
+    console.log(r)
     r.forEach(item => {
         let a = document.createElement("a")
         a.href = "activityDescription.html?id=" + item.id
