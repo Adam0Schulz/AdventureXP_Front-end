@@ -1,9 +1,8 @@
-
 #bluebox {
     border-radius: 25px; /* rounds the edges*/
-    background: #bddeff;
+    background: var(--light-blue);
     width: 50%;
-    padding: 20px;
+    padding: 3rem;
     height: 550px;
     margin: auto;
     text-align: center;
@@ -17,9 +16,8 @@
 
 }
 
-.activityTitle{
+#bookingTitle{
     margin-top: 30px;
-    margin-left: 20px;
     float: left;
 }
 
@@ -36,29 +34,30 @@
     text-align: center;
     margin-top: 20%;
     margin-bottom: 30%;
-    margin-left: 20px;
+
     margin-right: 20px;
+}
+.booking_cont {
+    overflow-y: scroll;
+    padding-right: 1rem;
+    scroll-behavior: smooth;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 5rem;
+
 }
 
 p {
     font-size: large;
+    font-weight: bold;
     text-align: justify;
 }
 
 #topBar{
     align-items: flex-start;
-
-}
-
-.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width:  250px;
-    height: 150px;
-
 
 }
 
@@ -80,7 +79,6 @@ p {
     border-radius: 1rem;
     font-style: italic;
     margin-right: 5px;
-    width: 110px;
     height: 38px;
 
 
@@ -105,8 +103,9 @@ p {
     border-radius: 1rem;
     font-style: italic;
     margin-right: 5px;
-    width: 110px;
     height: 38px;
+
+
 }
 
 .deleteButton{
@@ -127,8 +126,27 @@ p {
     border-radius: 1rem;
     font-style: italic;
     margin-right: 5px;
-    width: 110px;
     height: 38px;
 
 }
+.booking{
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-left: 50px
+;
 
+}
+
+.bookings_cont{
+    margin-top: 20%;
+    /*display: flex;*/
+    flex-wrap: wrap;
+
+}
+
+/*section {*/
+/*    text-align: center;*/
+
+/*}*/

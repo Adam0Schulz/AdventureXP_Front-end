@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,14 +10,15 @@
             integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
             crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="../CSS/global.css"  media="screen">
-    <link rel="stylesheet" type="text/css" href="../CSS/activityDescription.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/booking.css" media="screen">
+
     <link rel="stylesheet" type="text/css" href="../CSS/DeleteActivityPop-up.css">
     <link rel="stylesheet" type="text/css" href="../CSS/addNewActivity.css">
 
     <script src="../JS/DeleteActivityPop-up.js" defer></script>
-    <script src="../JS/fetchActivityDescriptions.js" defer></script>
     <script src="../JS/editActivityPop-up.js" defer></script>
-    <title>Description</title>
+    <script src="../JS/booking.js" type="module" defer></script>
+    <title>Booking</title>
 </head>
 <body>
 <div id="cont"></div>
@@ -28,23 +29,37 @@
 
     <div id="topBar">
 
-    <button class="btn small-btn deleteButton" id="deleteActivityBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
-    <button class="btn small-btn editButton" id="editActivityBtn"> <img src="../img/icons/edit-icon.png"> Edit </button>
+        <button class="btn small-btn deleteButton" id="deleteActivityBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
+        <button class="btn small-btn editButton" id="editActivityBtn"> <img src="../img/icons/edit-icon.png"> Edit </button>
         <form action="activities.html">
-    <button class="btn small-btn backButton" > <img src="../img/icons/back-icon.png">  Back </button>
+            <button class="btn small-btn backButton" > <img src="../img/icons/back-icon.png">  Back </button>
         </form>
 
-        <div id="activityTitle">
-    <h1 class="activityTitle">Title</h1>
+        <div id="bookingTitle">
+            <h1 class="bookingTitle">Booking</h1>
+            <p id="bookingid"></p>
         </div>
     </div>
 
 
-    <div id="descriptionText">
-    <h2 id="descriptionTitle">Description</h2>
-    <p class="descriptionText"></p>
+
+
+    <div class="bookings_cont" id="bookings_cont">
+        <div class="booking">
+            <h3>No. of participants</h3>
+            <p id="participants"></p>
+            <h3>Activity</h3>
+            <p id="activity"></p>
+            <h3>Date</h3>
+            <p id="date"></p>
+            <h3>Start</h3>
+            <p id="start"></p>
+            <h3>End</h3>
+            <p id="end"></p>
+        </div>
     </div>
 
 </div>
+
 </body>
 </html>
