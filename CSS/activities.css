@@ -11,7 +11,7 @@
 .activity{
     width: 100%;
     height: 10rem;
-    background-size: cover;
+    background-color: var(--blue);
     border-radius: 2rem;
     color: white;
     display: flex;
@@ -20,6 +20,7 @@
     font-weight: 700;
     font-size: 1.2rem;
     transition: 1s;
+    background-size: cover;
 }
 .activity:hover{
     scale: 0.97;
@@ -29,12 +30,6 @@
 .activities-box{
     padding-left: 10rem;
     padding-right: 10rem;
-}
-
-.header{
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .header h1 {
@@ -52,6 +47,7 @@
     grid-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
+
     width: 100%;
     margin-top: 5rem;
 
