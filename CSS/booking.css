@@ -138,3 +138,15 @@ p {
 ;
 
 }
+
+.bookings_cont{
+    margin-top: 20%;
+    /*display: flex;*/
+    flex-wrap: wrap;
+
+}
+
+/*section {*/
+/*    text-align: center;*/
+
+/*}*/
