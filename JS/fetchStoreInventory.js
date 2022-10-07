@@ -1,34 +1,35 @@
-const apiUrl = "http://localhost8080/candy";
+const url = "http://localhost:8080/candy";
+const out = (any) => console.log(any)
 
-getIt();
-    async function getIt(){
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        console.log(data);
-    show(data);
+const table = document.getElementById("table")
+console.log(table)
+doFetchItems()
+
+async function doFetchItems() {
+    out("items")
+    let item = await fetchItems();
+    out(item); //students is an array
+    item.forEach(createTable)
 }
-// Calling that async function
 
-
-// Function to hide the loader
-
-// Function to define innerHTML for HTML table
-function show(data) {
-    let tab =
-        `<tr>
-          <th>Name</th>
-          <th>Price</th>
-         </tr>`;
-
-    // Loop to access all rows
-    for (let r of data.list) {
-        tab += `<tr> 
-    <td>${r.name} </td>
-    <td>${r.price}</td> 
-         
-</tr>`;
-    }
-    // Setting innerHTML as tab variable
-    document.getElementById("table").innerHTML = tab;
+function fetchItems() {
+    out("inside fetch Items")
+    return fetch(url).then(response => response.json()); //returns the result of json()
 }
+
+function createTable(item) {
+
+    let rowCount = table.rows.length
+    out("rowcount=" + rowCount)
+    let row = table.insertRow(rowCount)
+
+    let cell1 = row.insertCell(0)
+    cell1.innerHTML = item.name
+
+    let cell2 = row.insertCell(1)
+    cell2.innerHTML = item.price
+
+}
+
+
 
