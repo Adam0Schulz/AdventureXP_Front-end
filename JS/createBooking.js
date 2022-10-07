@@ -30,14 +30,13 @@ let newBooking =
     }
 let activityId
 
-
+//dropdown list fetch data from the activity table
 getAll("activities").then(data => {
     console.log(data)
     data.forEach(activity => {
         const option = document.createElement("option")
         option.setAttribute("value", activity.id + "")
         option.innerText = activity.name
-
         activitySelect.append(option)
     })
 })
@@ -58,4 +57,12 @@ saveBooking.addEventListener('click', () =>
     create(newCustomer, "customers").then(customer => newBooking.customer = customer)
     createWithParam(newBooking, "bookings", ["activityId", activityId]).then()
 
+
+    //cancelBooking button and go back to the booking page
+    cancelBooking.addEventListener("click", ()=> {
+        if (confirm("Do you want to cancel?")) {
+            window.location.href = "booking.html";
+        }
+    });
 })
+
