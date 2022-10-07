@@ -1,0 +1,29 @@
+
+.twobutton{
+
+    padding: 20px;
+    display: flex;
+    width: 20rem;
+    margin-left: 320px;
+}
+
+#name{
+    margin-bottom: 20px;
+    height: 3.2em;
+}
+
+#price {
+    height: 3.2rem;
+    margin-bottom: -3%;
+}
+
+#saveButton{
+    background-color: var(--green);
+    margin-right: 20px;
+
+}
+
+#cancelButton {
+    background-color: var(--yellow);
+}
+
