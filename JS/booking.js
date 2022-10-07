@@ -1,22 +1,53 @@
-const bookingsCont= document.querySelector('#bookings_cont')
+
+// onst activityName = document.querySelector(".activityTitle");
+// const activityDescription = document.querySelector(".descriptionText");
+//
+// //Get id from URL sent by acitivities.html
+// const param = new URLSearchParams(window.location.search);
+// const urlId = param.get("id");
+// const id = urlId;
+// const apiUrl = "http://localhost:8080/activities/" + id
+//
+// async function getIt(){
+//         const response = await fetch(apiUrl);
+//         const data = await response.json();
+//         console.log(data);
+//
+//         activityName.textContent = data.name;
+//         activityDescription.textContent = data.description;
+// }
+// getIt();
+// const apiUrl = "http://localhost:8080/bookings/" + id
+//
+import { getById } from "./Service/API_calls.js";
+// const bookingsCont= document.querySelector('#bookings_cont')
 
 const param = new URLSearchParams(window.location.search);
 const id = param.get("id");
+const participants = document.getElementById("participants")
+const activity = document.getElementById("activity")
+const date = document.getElementById("date")
+const start = document.getElementById("start")
+const end = document.getElementById("end")
+const bookingId = document.getElementById("bookingid")
 
-
-
-import { getById } from "./Service/API_calls.js";
 
 getById(id,"bookings").then(item => {
         console.log(item)
-        let a = document.createElement("a")
-        let div = document.createElement("div")
-        div.className = "booking"
-        //make it in table
-        div.innerHTML = "<table><tr><td>Number_of_participant: </td><td>" + item.numberOfParticipants + "</td></tr><tr><td>Activity: </td><td>" + item.activity.name+ "</td></tr><tr><td>Date: </td><td>" + item.date + "</td></tr><tr><td>Start: </td><td>" + item.startTime + "</td></tr><tr><td>End: </td><td>" + item.endTime + "</td></tr></table>"
 
-        a.appendChild(div)
-        bookingsCont.appendChild(a)
 
-}
+        bookingId.textContent = "#" +item.id;
+        participants.textContent = item.numberOfParticipants;
+        activity.textContent = item.activity.name;
+        date.textContent = item.date;
+        start.textContent = item.startTime;
+        end.textContent = item.endTime;
+
+
+
+
+
+
+
+    }
 )
