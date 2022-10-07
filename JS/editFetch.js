@@ -3,6 +3,7 @@ const saveButton = document.getElementById("saveButton");
 const url= "http://localhost:8080/activities/"+id;
 const nameTag = document.getElementById("title");
 const typeTag = document.getElementById("description");
+let imageName = ""
 
 console.log(url)
 
@@ -14,6 +15,7 @@ async function getMe()
     console.log(response);
     nameTag.value = response.name
     typeTag.value = response.description
+    imageName = response.imageName
 }
 
 async function editActivity(activity) {
@@ -35,7 +37,8 @@ saveButton.addEventListener('click', (e) => {
         editActivity({
             "id": id,
             "name": nameTag.value,
-            "description": typeTag.value
+            "description": typeTag.value,
+            "imageName": imageName
         }
 
         )

@@ -29,6 +29,22 @@ cancelButton.addEventListener("click", () => {
 });
 
 
+// upload file logic
+const image_input = document.querySelector("#image_input")
+var uploaded_image = "";
+
+image_input.addEventListener("change", function (){
+    const reader = new FileReader();
+    reader.addEventListener("load", ()=> {
+        uploaded_image = reader.result
+        document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+    });
+    reader.readAsDataURL(this.files[0]);
+
+})
+
+
+
 //fetch url and save as post request
 saveButton.addEventListener("click", () => {
     //name and type should not be empty
