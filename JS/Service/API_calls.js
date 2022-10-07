@@ -1,4 +1,4 @@
-console.log("hello2")
+
 const url = 'http://localhost:8080'
 
 export async function getAll(resource) {
@@ -52,7 +52,7 @@ export async function create(body,resource){
     })
         .then(response => {
             if(response.status===200){
-                return response
+                return  "successfully created item"
             }
             return response.status
         })
@@ -85,6 +85,13 @@ export async function createWithParam(body,resource,[parameterName, parameterVal
         })
         .catch(err => console.log(err))
 }
+
+export async function getActivityBookingsByDate(id, date) {
+    return fetch(url + '/activities/' + id + '/bookings?date=' + date)
+        .then(response => response.json())
+        .catch(err => console.log(err))
+}
+
 
 
 
