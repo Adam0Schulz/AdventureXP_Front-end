@@ -1,4 +1,4 @@
-console.log("hello2")
+
 const url = 'http://localhost:8080'
 
 export async function getAll(resource) {
@@ -64,6 +64,12 @@ export async function create(body,resource){
 export async function search(keyword,resource){
     return fetch(url + '/'+ resource+'/search/' + keyword)
         .then(response => response.json())
+}
+
+export async function getActivityBookings(id) {
+    return fetch(url + '/activities/' + id + '/bookings')
+        .then(response => response.json())
+        .catch(err => console.log(err))
 }
 
 
