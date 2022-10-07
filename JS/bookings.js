@@ -106,6 +106,9 @@ getAll('activities').then(activityData => {
         rowTimeline.setAttribute('width', timelineSegments.offsetWidth + '')
         getActivityBookings(activity.id).then(bookingData => {
             bookingData.forEach(booking => {
+
+                let a = document.createElement("a")
+                a.href = "booking.html?id=" + booking.id
                 let bookingBlock = document.createElement('div')
                 bookingBlock.className = "booking_block"
 
@@ -133,8 +136,8 @@ getAll('activities').then(activityData => {
                 bookingBlock.append(bookingBody)
 
                 bookingBlock.style.backgroundColor = bookingBlockBackgroundColors[Math.floor(Math.random() * bookingBlockBackgroundColors.length)]
-
-                rowTimeline.append(bookingBlock)
+                a.appendChild(bookingBlock)
+                rowTimeline.append(a)
             })
         })
 
