@@ -55,14 +55,11 @@ saveBooking.addEventListener('click', () =>
     newBooking.customer = newCustomer.value
     console.log(newCustomer)
     create(newCustomer, "customers").then(customer => newBooking.customer = customer)
-    createWithParam(newBooking, "bookings", ["activityId", activityId]).then()
+    createWithParam(newBooking, "bookings", ["activityId", activityId]).then(window.location.replace("bookings.html"))
+})
 
-
-    //cancelBooking button and go back to the booking page
-    cancelBooking.addEventListener("click", ()=> {
-        if (confirm("Do you want to cancel?")) {
-            window.location.href = "booking.html";
-        }
-    });
+//cancelBooking button and go back to the booking page
+cancelBooking.addEventListener("click", ()=> {
+    window.location.href = "bookings.html";
 })
 
