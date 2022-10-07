@@ -118,6 +118,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 60vw;
+
     height: 35vw;
     min-height: 30rem;
     min-width: 55rem;
@@ -139,18 +140,27 @@ body {
 
 .popupBox
 {
+    background-color: var(--light-blue);
+
     position: absolute;
-    z-index: 5;
+    /*z-index: 5;*/
     padding: 3rem;
     min-width: 30rem;
     min-height: 30rem;
-    width: 30vw;
+    width: 50vw;
+    /*width: 700px;*/
     height: inherit;
     display: block;
     margin: 0;
     border-radius: var(--Medium);
+
 }
 
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
 .background
 {
