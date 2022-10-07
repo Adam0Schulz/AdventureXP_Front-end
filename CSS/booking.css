@@ -12,6 +12,7 @@
     line-height: 1.5;
     display: block;
     vertical-align: middle;
+    overflow: scroll;
 
 
 }
@@ -54,10 +55,14 @@ p {
     font-size: large;
     font-weight: bold;
     text-align: justify;
+    margin-bottom: 3%;
+    font-weight: lighter;
+    font-size: 20px;
 }
 
 #topBar{
     align-items: flex-start;
+    margin-top: -5%;
 
 }
 
@@ -145,7 +150,31 @@ p {
     flex-wrap: wrap;
 
 }
+/*p{*/
+/*    !*font-size: 17px;*!*/
+/*    margin-bottom: 3%;*/
+/*    font-weight: lighter;*/
+/*}*/
 
+#rightside{
+    margin-top: -61%;
+    margin-left: 300px;
+}
+
+#customer{
+    font-size: 30px;
+    margin-top: 3%;
+    margin-left: -9%;
+    margin-bottom: 3%;
+}
+
+#moveleft{
+    margin-left: 300px;
+    margin-top: -27%;
+}
+h3{
+    font-size: 20px;
+}
 /*section {*/
 /*    text-align: center;*/
 
