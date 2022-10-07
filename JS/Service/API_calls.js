@@ -72,6 +72,12 @@ export async function getActivityBookings(id) {
         .catch(err => console.log(err))
 }
 
+export async function getActivityBookingsByDate(id, date) {
+    return fetch(url + '/activities/' + id + '/bookings?date=' + date)
+        .then(response => response.json())
+        .catch(err => console.log(err))
+}
+
 
 
 
