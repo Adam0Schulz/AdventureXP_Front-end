@@ -16,8 +16,20 @@
     margin-bottom: -3%;
 }
 
+#imageUploadCont{
+    display: flex;
+    flex-direction: row;
+}
 
-
+#display_image{
+    width: 74px;
+    height: 42px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--radius);
+    background-color: white;
+}
 
 #buttonSave, #buttonCancel {
     text-align: center;
@@ -32,6 +44,7 @@
 #cancelButton {
     background-color: var(--yellow);
 }
+
 .twobutton{
 
     padding: 20px;
