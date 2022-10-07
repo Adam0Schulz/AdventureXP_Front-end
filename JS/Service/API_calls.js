@@ -63,6 +63,22 @@ export async function search(keyword,resource){
         .then(response => response.json())
 }
 
+export async function createWithParam(body,resource,[parameterName, parameterValue]){
+    return fetch(url + '/'+ resource+'/' + "?" + parameterName + "=" + parameterValue, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+    })
+        .then(response => {
+            if(response.status===200){
+                return  "successfully created item"
+            }
+            return response.status
+        })
+        .catch(err => console.log(err))
+}
 
 
 
