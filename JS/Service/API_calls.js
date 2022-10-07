@@ -52,7 +52,7 @@ export async function create(body,resource){
     })
         .then(response => {
             if(response.status===200){
-                return  "successfully created item"
+                return response
             }
             return response.status
         })
@@ -70,7 +70,8 @@ export async function getActivityBookings(id) {
 }
 
 export async function createWithParam(body,resource,[parameterName, parameterValue]){
-    return fetch(url + '/'+ resource+'/' + "?" + parameterName + "=" + parameterValue, {
+    console.log(url + '/'+ resource+'/' + "?" + parameterName + "=" + parameterValue)
+    return fetch(url + '/'+ resource + "?" + parameterName + "=" + parameterValue, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -78,10 +79,9 @@ export async function createWithParam(body,resource,[parameterName, parameterVal
         body: JSON.stringify(body)
     })
         .then(response => {
-            if(response.status===200){
-                return  "successfully created item"
+            if(response.status===201){
+                return response.body
             }
-            return response.status
         })
         .catch(err => console.log(err))
 }
