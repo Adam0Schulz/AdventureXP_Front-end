@@ -48,10 +48,7 @@ export async function create(body,resource){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(body
-
-
-        )
+        body: JSON.stringify(body)
     })
         .then(response => {
             if(response.status===200){
@@ -69,6 +66,23 @@ export async function search(keyword,resource){
 export async function getActivityBookings(id) {
     return fetch(url + '/activities/' + id + '/bookings')
         .then(response => response.json())
+        .catch(err => console.log(err))
+}
+
+export async function createWithParam(body,resource,[parameterName, parameterValue]){
+    console.log(url + '/'+ resource+'/' + "?" + parameterName + "=" + parameterValue)
+    return fetch(url + '/'+ resource + "?" + parameterName + "=" + parameterValue, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+    })
+        .then(response => {
+            if(response.status===201){
+                return response.body
+            }
+        })
         .catch(err => console.log(err))
 }
 

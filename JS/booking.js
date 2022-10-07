@@ -1,22 +1,41 @@
-const bookingsCont= document.querySelector('#bookings_cont')
-
-const param = new URLSearchParams(window.location.search);
-const id = param.get("id");
-
-
 
 import { getById } from "./Service/API_calls.js";
 
+const param = new URLSearchParams(window.location.search);
+const id = param.get("id");
+const participants = document.getElementById("participants")
+const activity = document.getElementById("activity")
+const date = document.getElementById("date")
+const start = document.getElementById("start")
+const end = document.getElementById("end")
+const bookingId = document.getElementById("bookingid")
+const firstname = document.getElementById("firstname")
+const lastname = document.getElementById("lastname")
+const phone = document.getElementById("phone")
+const email = document.getElementById("email")
+
+
+
 getById(id,"bookings").then(item => {
         console.log(item)
-        let a = document.createElement("a")
-        let div = document.createElement("div")
-        div.className = "booking"
-        //make it in table
-        div.innerHTML = "<table><tr><td>Number_of_participant: </td><td>" + item.numberOfParticipants + "</td></tr><tr><td>Activity: </td><td>" + item.activity.name+ "</td></tr><tr><td>Date: </td><td>" + item.date + "</td></tr><tr><td>Start: </td><td>" + item.startTime + "</td></tr><tr><td>End: </td><td>" + item.endTime + "</td></tr></table>"
 
-        a.appendChild(div)
-        bookingsCont.appendChild(a)
+        bookingId.textContent = "#" +item.id;
+        participants.textContent = item.numberOfParticipants;
+        activity.textContent = item.activity.name;
+        date.textContent = item.date;
+        start.textContent = item.startTime;
+        end.textContent = item.endTime;
+        firstname.textContent = item.customer.firstname
+        lastname.textContent = item.customer.lastname
 
-}
+        email.textContent = item.customer.email
+        phone.textContent = item.customer.phone
+
+
+
+
+
+
+
+    }
 )

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -14,9 +14,10 @@
 
     <link rel="stylesheet" type="text/css" href="../CSS/DeleteActivityPop-up.css">
     <link rel="stylesheet" type="text/css" href="../CSS/addNewActivity.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/createBooking.css">
 
-    <script src="../JS/DeleteActivityPop-up.js" defer></script>
-    <script src="../JS/editActivityPop-up.js" defer></script>
+    <script src="../JS/DeleteBookingPop-up.js" defer></script>
+    <script src="../JS/editBookingPop-up.js" defer></script>
     <script src="../JS/booking.js" type="module" defer></script>
     <title>Booking</title>
 </head>
@@ -29,22 +30,54 @@
 
     <div id="topBar">
 
-        <button class="btn small-btn deleteButton" id="deleteActivityBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
-        <button class="btn small-btn editButton" id="editActivityBtn"> <img src="../img/icons/edit-icon.png"> Edit </button>
+        <button class="btn small-btn deleteButton" id="deleteBookingBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
+        <button class="btn small-btn editButton" id="editBookingBtn"> <img src="../img/icons/edit-icon.png"> Edit </button>
         <form action="activities.html">
             <button class="btn small-btn backButton" > <img src="../img/icons/back-icon.png">  Back </button>
         </form>
 
         <div id="bookingTitle">
             <h1 class="bookingTitle">Booking</h1>
+            <p id="bookingid"></p>
         </div>
     </div>
 
 
+
+
     <div class="bookings_cont" id="bookings_cont">
+        <div class="booking">
+            <h3>No. of participants</h3>
+            <p id="participants"></p>
+            <h3>Activity</h3>
+            <p id="activity"></p>
+            <h3>Date</h3>
+            <p id="date"></p>
+
+            <h2 id="customer">Customer</h2>
+            <h3>First Name</h3>
+            <p id="firstname"></p>
+            <h3>Last Name</h3>
+            <p id="lastname"></p>
+            <div id="moveleft">
+            <h3>Phone Number</h3>
+            <p id="phone"></p>
+            <h3>Email</h3>
+            <p id="email"></p>
+            </div>
+            <div id="rightside">
+            <h3>Start</h3>
+            <p id="start"></p>
+            <h3>End</h3>
+            <p id="end"></p>
+            </div>
+
+        </div>
 
     </div>
 
+
 </div>
+
 </body>
 </html>
