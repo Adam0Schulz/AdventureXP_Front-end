@@ -32,7 +32,7 @@ body {
     */
 
     --light-blue: rgb(189, 222, 255);
-    --blue: #70ee0a;
+    --blue: rgba(96, 182, 236, 0.99);
     --yellow: #FDC517;
     --green: #64B81F;
     --red: #E3260D;
