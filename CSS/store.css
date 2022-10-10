@@ -20,6 +20,7 @@ table {
     line-height: 1.5;
     display: block;
     vertical-align: middle;
+    overflow-y: scroll;
 
 
 }
@@ -65,18 +66,6 @@ th, td {
 
 }
 
-.candy_cont {
-    overflow-y: scroll;
-    padding-right: 1rem;
-    scroll-behavior: smooth;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-evenly;
-    width: 100%;
-    margin-top: 5rem;
-
-}
 
 
 
