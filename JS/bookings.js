@@ -111,7 +111,9 @@ function populateCalendar(date) {
                     bookingBlock.append(bookingHeading)
                     bookingBlock.append(bookingBody)
 
-                    bookingBlock.style.backgroundColor = bookingBlockBackgroundColors[Math.floor(Math.random() * bookingBlockBackgroundColors.length)]
+                    //bookingBlock.style.backgroundColor = bookingBlockBackgroundColors[Math.floor(Math.random() * bookingBlockBackgroundColors.length)]
+                    bookingBlock.style.backgroundColor = "var(--green)"
+
                     a.append(bookingBlock)
                     rowTimeline.append(a)
                 })
