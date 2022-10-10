@@ -2,6 +2,7 @@ table {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
+
 }
 
 
@@ -52,9 +53,10 @@ th, td {
 
 }
 
-h1{
+.h1{
     margin-top: 30px;
     margin-left: 20px;
+    margin-bottom: 70px;
     float: left;
 }
 
@@ -62,6 +64,7 @@ h1{
     align-items: flex-start;
 
 }
+
 .candy_cont {
     overflow-y: scroll;
     padding-right: 1rem;
@@ -70,11 +73,11 @@ h1{
     grid-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
-
     width: 100%;
     margin-top: 5rem;
 
 }
+
 
 
 
