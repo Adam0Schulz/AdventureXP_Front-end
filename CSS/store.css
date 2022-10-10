@@ -62,7 +62,19 @@ h1{
     align-items: flex-start;
 
 }
+.candy_cont {
+    overflow-y: scroll;
+    padding-right: 1rem;
+    scroll-behavior: smooth;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
 
+    width: 100%;
+    margin-top: 5rem;
+
+}
 
 
 
