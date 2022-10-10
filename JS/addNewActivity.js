@@ -61,15 +61,17 @@ saveButton.addEventListener("click", () => {
         alert("Name is not valid");
         return;
     }
-    if (!type.match(/^[a-zA-Z0-9 ]+$/)) {
-        alert("Type is not valid");
-        return;
-    }
+        if (!type.match(/^[a-zA-Z0-9 ]+$/)) {
+            alert("Type is not valid");
+            return;
+        }
+
  //make shore is not save type with only numbers
-    if (type.match(/^[0-9]+$/)) {
-        alert("Type is not valid");
-        return;
-    }
+        if (type.match(/^[0-9]+$/)) {
+            alert("Type is not valid");
+            return;
+        }
+
     if (name.match(/^[0-9]+$/)) {
         alert("Number is not valid");
         return;
