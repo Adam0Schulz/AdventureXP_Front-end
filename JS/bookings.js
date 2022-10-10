@@ -4,12 +4,27 @@ import {getActivityBookingsByDate, getAll} from './Service/API_calls.js'
 const bookingBlockBackgroundColors = ['blue', 'green']
 const calendarBody = document.querySelector('#calendar_body')
 let timelineSegments = document.querySelector('#timeline_segments')
+const calendarDate = document.getElementById("date")
+const forwardBtn = document.querySelector('#nextDayBtn')
+const backwardBtn = document.querySelector('#previousDayBtn')
 const numOfHours = 8
 let date = new Date()
 
 
+forwardBtn.addEventListener('click', (e) => {
+    date.setDate(date.getDate() + 1)
+    calendarDate.value = getDate(date)
+    changeDate(calendarDate.value)
+})
+
+backwardBtn.addEventListener('click', (e) => {
+    date.setDate(date.getDate() - 1)
+    calendarDate.value = getDate(date)
+    changeDate(calendarDate.value)
+})
+
 // Date stuff
-document.getElementById('date').value =  getDate(date)
+calendarDate.value =  getDate(date)
 function getDate(date) {
     let dateDay = date.getDate().toString().length > 1 ? date.getDate() : '0' + date.getDate()
     let dateMonth = (date.getMonth() + 1).toString().length > 1 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1) //+1 is there because the months are zero based
@@ -35,27 +50,24 @@ function createTimeline() {
         timelineSegments.append(timeSegment)
         hour = wholeHour ? hour : hour + 1
     }
+    timelineSegments.style.height = '0px'
 }
 createTimeline()
 
 
 // Changes the calendar content on date change
-const calendarDate = document.getElementById("date")
-calendarDate.addEventListener("change", e => {
+function changeDate(dateValue) {
+    dateValue = dateValue.split('-', 3)
 
-    let tempDate = e.target.value
-    tempDate = tempDate.split('-', 3)
-
-    date.setDate(parseInt(tempDate[2]))
-    date.setMonth(tempDate[1] - 1)
-    date.setFullYear(parseInt(tempDate[0]))
+    date.setDate(parseInt(dateValue[2]))
+    date.setMonth(dateValue[1] - 1)
+    date.setFullYear(parseInt(dateValue[0]))
 
     calendarBody.innerHTML = ''
     createTimeline()
     populateCalendar(date)
-
-
-})
+}
+calendarDate.addEventListener("change", e => changeDate(e.target.value))
 
 
 // Populates the calendar with activity rows
@@ -64,6 +76,7 @@ function populateCalendar(date) {
     getAll('activities').then(activityData => {
 
         activityData.forEach(activity => {
+
             let activityRow = document.createElement('div')
             activityRow.className = "activity_row"
             let activityColumn = document.createElement('div')
@@ -79,6 +92,7 @@ function populateCalendar(date) {
             rowTimeline.style.minWidth = timelineSegments.offsetWidth + 'px'
             rowTimeline.setAttribute('width', timelineSegments.offsetWidth + '')
             console.log(activity.name)
+
             getActivityBookingsByDate(activity.id, getDate(date)).then(bookingData => {
                 bookingData.forEach(booking => {
 
@@ -120,7 +134,8 @@ function populateCalendar(date) {
 
             activityRow.append(rowTimeline)
             calendarBody.append(activityRow)
-
+            console.log(activityRow.offsetHeight)
+            timelineSegments.style.height = (timelineSegments.offsetHeight + activityRow.offsetHeight) + 'px'
 
         })
     })
@@ -128,8 +143,6 @@ function populateCalendar(date) {
 
 
 populateCalendar(date)
-
-
 
 
 

@@ -21,37 +21,22 @@
     <div class="bluebox">
         <div class="header">
             <h1>Bookings</h1>
-            <div>
-                <div class="search_input_cont">
-                    <input class="search_input" type="text" name="search" placeholder="Search" />
-                </div>
-                <button class="btn small-btn btn-bookings" id="addBtn"><img src="../img/icons/add-icon.png" />new</button>
-            </div>
+            <button class="btn small-btn btn-bookings" id="addBtn"><img src="../img/icons/add-icon.png" />new</button>
+
 
         </div>
         <div class="calendar_cont">
             <div class="calendar_header">
-                <button><</button>
+                <button class="btn calendar_btn" id="previousDayBtn"><</button>
                 <div>
                     <input type="date" name="date" id="date">
                 </div>
-                <button>></button>
+                <button class="btn calendar_btn" id="nextDayBtn">></button>
             </div>
             <div class="calendar_body" id="calendar_body">
                 <div class="timeline_segments" id="timeline_segments">
 
                 </div>
-                <!--<div class="activity_row">
-                    <div class="activity_column">
-                        <h3>Go-kart</h3>
-                    </div>
-                    <div class="row-timeline">
-                        <div class="booking_block">
-                            #125 Adam Schulz<br>
-                            7:30 - 8:30
-                        </div>
-                    </div>
-                </div>-->
             </div>
         </div>
     </div>
