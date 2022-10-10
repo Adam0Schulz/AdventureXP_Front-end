@@ -9,7 +9,7 @@ table {
 #bluebox {
     border-radius: 25px; /* rounds the edges*/
     background: #bddeff;
-    width: 50%;
+    width: 65%;
     padding: 20px;
     height: 550px;
     margin: auto;
@@ -21,6 +21,7 @@ table {
     display: block;
     vertical-align: middle;
     overflow-y: scroll;
+
 
 
 }
@@ -54,6 +55,30 @@ th, td {
 
 }
 
+.tableButton{
+    background: var(--blue);
+    color: white;
+    padding: 0.375rem 0.75rem;
+    letter-spacing: var(--spacing);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    float: right; /*moves buttons to the right*/
+    margin-top: 35px;
+    border-radius: 1rem;
+    font-style: italic;
+    margin-right: 5px;
+    width: 110px;
+    height: 38px;
+
+
+}
+
 .h1{
     margin-top: 30px;
     margin-left: 20px;
@@ -64,6 +89,27 @@ th, td {
 #topBar{
     align-items: flex-start;
 
+}
+
+/* Style the tab */
+
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
 
 

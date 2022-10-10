@@ -81,6 +81,10 @@ function populateCalendar(date) {
             console.log(activity.name)
             getActivityBookingsByDate(activity.id, getDate(date)).then(bookingData => {
                 bookingData.forEach(booking => {
+
+
+                    let a = document.createElement('a')
+                    a.href = "booking.html?id="+booking.id
                     let bookingBlock = document.createElement('div')
                     bookingBlock.className = "booking_block"
 
@@ -102,16 +106,17 @@ function populateCalendar(date) {
                     bookingHeading.innerText = "#" + booking.id + " - " + booking.customer.firstname + " " + booking.customer.lastname
 
                     let bookingBody = document.createElement('p')
-                    bookingBody.innerHTML= booking.startTime + " - " + booking.endTime + "<br />" + "No. of Part.: " +  booking.numberOfParticipants
+                    bookingBody.innerHTML= booking.startTime + " - " + booking.endTime + "<br/>" + "No. of Part.: " +  booking.numberOfParticipants
 
                     bookingBlock.append(bookingHeading)
                     bookingBlock.append(bookingBody)
 
                     bookingBlock.style.backgroundColor = bookingBlockBackgroundColors[Math.floor(Math.random() * bookingBlockBackgroundColors.length)]
-
-                    rowTimeline.append(bookingBlock)
+                    a.append(bookingBlock)
+                    rowTimeline.append(a)
                 })
             })
+
 
             activityRow.append(rowTimeline)
             calendarBody.append(activityRow)
