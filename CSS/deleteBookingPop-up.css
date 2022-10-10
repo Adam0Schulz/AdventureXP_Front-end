@@ -1,0 +1,62 @@
+.btnYes {
+    background: var(--green);
+    margin-right: 3rem;
+    /*color: white;
+    padding: 0.5em 2em;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    font-style: italic;
+    display: inline-block;
+    margin-right: 20px;*/
+
+
+}
+.btnNo {
+    background: var(--red);
+    /*color: white;
+    padding: 0.5em 2em;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    font-style: italic;
+    display: inline-block;*/
+}
+
+.pStyle {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#pBooking {
+    margin: 3rem 0;
+    font-size: 1.5em;
+    color: var(--yellow);
+}
+
+.divStyle
+{
+    text-align: center;
+    width: 40rem;
+    height: 32rem;
+    background-color: white;
+}
+
+.button_cont {
+    display: flex;
+    justify-content: center;
+}
+
+
