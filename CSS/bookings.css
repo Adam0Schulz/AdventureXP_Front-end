@@ -59,7 +59,7 @@
     padding-top: 2em;
 }
 
-.timeline_segments {
+#timeline_segments {
     position: absolute;
     left: var(--activity-column-width);
     top: 1em;
@@ -69,7 +69,7 @@
 
 }
 
-.timeline_segments div {
+#timeline_segments div {
     width: 0;
     height: 100%;
     padding-top: 3em;
@@ -77,15 +77,15 @@
     margin: 0 3em;
 }
 
-.timeline_segments div:first-of-type {
+#timeline_segments div:first-of-type {
     margin-left: 0;
 }
 
-.timeline_segments div:last-of-type {
+#timeline_segments div:last-of-type {
     margin-right: 0;
 }
 
-.timeline_segments div::before {
+#timeline_segments div::before {
     content: attr(data-before);
     display: block;
     position: absolute;
@@ -139,4 +139,9 @@
 
 .booking_block p {
     font-size: .8em;
+}
+
+#date {
+    outline: none;
+    border: none;
 }
