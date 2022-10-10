@@ -12,30 +12,70 @@
 
 </head>
 <body>
-<div id="cont"></div>
 
 <div class="logo_cont">
     <a href="../index.html"><img src="../img/AdventureXP_logo_transparent.png" class="logo" alt="Logo"></a>
 </div>
 
 <div id="bluebox">
-
     <div id="topBar">
+
         <button class="btn small-btn addButton" id="addCandyBtn" > <img src="../img/icons/add-icon.png"> Add </button>
         <div class="h1">
             <h1>Adventure Store</h1>
         </div>
     </div>
 
+    <div class="tab">
+        <button class="tableButton" onclick="openCity(Event, 'London')">London</button>
+        <button class="tableButton" onclick="openCity(Event, 'Paris')">Paris</button>
+        <button class="tableButton" onclick="openCity(Event, 'Tokyo')">Tokyo</button>
+    </div>
 
+    <!-- Tab content -->
+    <div id="London" class="tabcontent">
+        <div>
+            <div>
+                <table class="table" id="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 
-<div>
-        <table class="table" id="table">
-            <tr>
-                <th>Name</th>
-                <th>Price</th>
-            </tr>
-        </table>
+    <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+         <div>
+
+     <div id="DIV2">
+          <table class="table">
+              <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Price</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>Fizzy Bliss</td>
+                  <td>Swimming Pool Soda</td>
+              </tr>
+              <tr>
+                  <td>12.00</td>
+                  <td>32.00</td>
+              </tr>
+              </tbody>
+          </table>
+     </div>
+ </div>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
     </div>
 
 
