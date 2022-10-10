@@ -74,17 +74,6 @@ function populateCalendar(date) {
 
             activityRow.appendChild(activityColumn).append(activityHeading)
 
-        let rowTimeline = document.createElement('div')
-        rowTimeline.className = "row-timeline"
-        rowTimeline.style.minWidth = timelineSegments.offsetWidth + 'px'
-        rowTimeline.setAttribute('width', timelineSegments.offsetWidth + '')
-        getActivityBookings(activity.id).then(bookingData => {
-            bookingData.forEach(booking => {
-
-                let a = document.createElement("a")
-                a.href = "booking.html?id=" + booking.id
-                let bookingBlock = document.createElement('div')
-                bookingBlock.className = "booking_block"
             let rowTimeline = document.createElement('div')
             rowTimeline.className = "row-timeline"
             rowTimeline.style.minWidth = timelineSegments.offsetWidth + 'px'
@@ -92,13 +81,12 @@ function populateCalendar(date) {
             console.log(activity.name)
             getActivityBookingsByDate(activity.id, getDate(date)).then(bookingData => {
                 bookingData.forEach(booking => {
+
+
+                    let a = document.createElement('a')
+                    a.href = "booking.html?id="+booking.id
                     let bookingBlock = document.createElement('div')
                     bookingBlock.className = "booking_block"
-
-     /*               let a = document.createElement("a")
-                    a.href = "booking.html?id=" + booking.id
-                    let bookingBlock = document.createElement('div')
-                    bookingBlock.className = "booking_block"*/
 
 
                     const oneTimeSegment = (100 / (numOfHours * 2))
@@ -118,21 +106,17 @@ function populateCalendar(date) {
                     bookingHeading.innerText = "#" + booking.id + " - " + booking.customer.firstname + " " + booking.customer.lastname
 
                     let bookingBody = document.createElement('p')
-                    bookingBody.innerHTML= booking.startTime + " - " + booking.endTime + "<br />" + "No. of Part.: " +  booking.numberOfParticipants
+                    bookingBody.innerHTML= booking.startTime + " - " + booking.endTime + "<br/>" + "No. of Part.: " +  booking.numberOfParticipants
 
                     bookingBlock.append(bookingHeading)
                     bookingBlock.append(bookingBody)
 
-                bookingBlock.style.backgroundColor = bookingBlockBackgroundColors[Math.floor(Math.random() * bookingBlockBackgroundColors.length)]
-                a.appendChild(bookingBlock)
-                rowTimeline.append(a)
-            })
-        })
                     bookingBlock.style.backgroundColor = bookingBlockBackgroundColors[Math.floor(Math.random() * bookingBlockBackgroundColors.length)]
-
-                    rowTimeline.append(bookingBlock)
+                    a.append(bookingBlock)
+                    rowTimeline.append(a)
                 })
             })
+
 
             activityRow.append(rowTimeline)
             calendarBody.append(activityRow)
