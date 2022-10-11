@@ -13,6 +13,9 @@ const firstname = document.getElementById("firstname")
 const lastname = document.getElementById("lastname")
 const phone = document.getElementById("phone")
 const email = document.getElementById("email")
+const backBtn = document.getElementById("backBtn")
+
+
 
 
 
@@ -27,10 +30,12 @@ getById(id,"bookings").then(item => {
         end.textContent = item.endTime;
         firstname.textContent = item.customer.firstname
         lastname.textContent = item.customer.lastname
-
         email.textContent = item.customer.email
         phone.textContent = item.customer.phone
 
+        backBtn.addEventListener("click", e => {
+                window.location.href = "bookings.html?date=" + item.date
+        })
 
 
 

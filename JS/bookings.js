@@ -1,6 +1,8 @@
 import {getActivityBookingsByDate, getAll} from './Service/API_calls.js'
 
 // Defining all global variables
+const param = new URLSearchParams(window.location.search);
+const urlDate = param.get("date");
 const bookingBlockBackgroundColors = ['blue', 'green']
 const calendarBody = document.querySelector('#calendar_body')
 let timelineSegments = document.querySelector('#timeline_segments')
@@ -10,28 +12,6 @@ const backwardBtn = document.querySelector('#previousDayBtn')
 const numOfHours = 8
 let date = new Date()
 
-
-forwardBtn.addEventListener('click', (e) => {
-    date.setDate(date.getDate() + 1)
-    calendarDate.value = getDate(date)
-    changeDate(calendarDate.value)
-})
-
-backwardBtn.addEventListener('click', (e) => {
-    date.setDate(date.getDate() - 1)
-    calendarDate.value = getDate(date)
-    changeDate(calendarDate.value)
-})
-
-// Date stuff
-calendarDate.value =  getDate(date)
-function getDate(date) {
-    let dateDay = date.getDate().toString().length > 1 ? date.getDate() : '0' + date.getDate()
-    let dateMonth = (date.getMonth() + 1).toString().length > 1 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1) //+1 is there because the months are zero based
-    let dateYear = date.getFullYear()
-    return dateYear + '-' + dateMonth + '-' + dateDay
-
-}
 
 
 
@@ -55,6 +35,31 @@ function createTimeline() {
 createTimeline()
 
 
+
+// Date stuff
+
+//
+if (urlDate == null) {
+calendarDate.value =  getDate(date)
+} else{
+    calendarDate.value = urlDate
+    changeDate(urlDate)
+}
+
+
+function getDate(date) {
+    let dateDay = date.getDate().toString().length > 1 ? date.getDate() : '0' + date.getDate()
+    let dateMonth = (date.getMonth() + 1).toString().length > 1 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1) //+1 is there because the months are zero based
+    let dateYear = date.getFullYear()
+    return dateYear + '-' + dateMonth + '-' + dateDay
+
+}
+
+
+
+
+
+
 // Changes the calendar content on date change
 function changeDate(dateValue) {
     dateValue = dateValue.split('-', 3)
@@ -67,6 +72,24 @@ function changeDate(dateValue) {
     createTimeline()
     populateCalendar(date)
 }
+
+forwardBtn.addEventListener('click', (e) => {
+    date.setDate(date.getDate() + 1)
+    calendarDate.value = getDate(date)
+    changeDate(calendarDate.value)
+})
+
+backwardBtn.addEventListener('click', (e) => {
+    date.setDate(date.getDate() - 1)
+    calendarDate.value = getDate(date)
+    changeDate(calendarDate.value)
+})
+
+
+
+
+
+
 calendarDate.addEventListener("change", e => changeDate(e.target.value))
 
 
@@ -125,8 +148,6 @@ function populateCalendar(date) {
                     bookingBlock.append(bookingHeading)
                     bookingBlock.append(bookingBody)
 
-                    //bookingBlock.style.backgroundColor = bookingBlockBackgroundColors[Math.floor(Math.random() * bookingBlockBackgroundColors.length)]
-                    bookingBlock.style.backgroundColor = "var(--green)"
 
                     a.append(bookingBlock)
                     rowTimeline.append(a)
