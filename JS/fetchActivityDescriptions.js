@@ -10,7 +10,6 @@ const id = urlId;
 const apiUrl = "http://localhost:8080/activities/" + id
 const activityPage = true
 
-const bookingBackgroundColor = 'green'
 const calendarBody = document.querySelector('#calendar_body')
 let timelineSegments = document.querySelector('#timeline_segments')
 const calendarDate = document.querySelector("#calendar_date_input")
@@ -130,7 +129,6 @@ function populateCalendar(date) {
                     bookingBlock.append(bookingHeading)
                     bookingBlock.append(bookingBody)
 
-                    bookingBlock.style.backgroundColor = bookingBackgroundColor
                     a.append(bookingBlock)
                     rowTimeline.append(a)
                 })

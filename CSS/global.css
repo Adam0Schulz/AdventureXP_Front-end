@@ -271,6 +271,15 @@ body {
     padding: 1em;
     overflow-y: scroll;
     color: white;
+    transition: 1s;
+    background-color: var(--green);
+
+}
+.calendar_booking_block:hover{
+    scale: 1.10;
+    background-color: #b0ea81;
+    color: black;
+
 }
 
 .calendar_booking_block::-webkit-scrollbar {
