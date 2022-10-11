@@ -182,6 +182,141 @@ body {
     z-index: 10;
 }
 
+.calendar_cont {
+    width: 100%;
+    height: auto;
+    /*overflow-y: scroll;*/
+    background-color: white;
+    border-radius: 2em;
+    margin-top: 2em;
+    padding: 2em;
+}
+
+.calendar_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.calendar_body {
+    position: relative;
+    overflow: scroll;
+    height: 18vw;
+    padding-top: 2em;
+}
+
+#timeline_segments {
+    position: absolute;
+    left: var(--activity-column-width);
+    top: 1em;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#timeline_segments div {
+    width: 0;
+    height: 100%;
+    padding-top: 3em;
+    border-left: 2px dotted lightgray;
+    margin: 0 3em;
+}
+
+#timeline_segments div:first-of-type {
+    margin-left: 0;
+}
+
+#timeline_segments div:last-of-type {
+    margin-right: 0;
+}
+
+#timeline_segments div::before {
+    content: attr(data-before);
+    display: block;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -100%);
+    font-size: .8em;
+    color: gray;
+}
+
+.calendar_activity_row {
+    display: flex;
+    /*width: 100%;*/
+    height: 8em;
+    width: inherit;
+
+}
+
+.calendar_activity_column {
+    width: var(--activity-column-width);
+    min-width: var(--activity-column-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.calendar_activity_column h3 {
+    height: auto;
+    text-align: center;
+}
+
+.calendar_row-timeline {
+    /*background-color: blue;*/
+    /*width: calc(100% - var(--activity-column-width));*/
+    position: relative;
+    border-bottom: 1px solid lightgray;
+}
+
+.calendar_booking_block {
+    position: absolute;
+    height: 100%;
+    border-radius: 25px;
+    padding: 1em;
+    overflow-y: scroll;
+    color: white;
+    transition: 1s;
+    background-color: var(--green);
+
+}
+.calendar_booking_block:hover{
+    scale: 1.10;
+    background-color: #b0ea81;
+    color: black;
+
+}
+
+.calendar_booking_block::-webkit-scrollbar {
+    display: none;
+}
+
+.calendar_booking_block p {
+    font-size: .8em;
+}
+
+#calendar_date_input {
+    outline: none;
+    border: none;
+    font-size: 1.2em;
+    font-family: "Comic Sans MS";
+}
+
+.calendar_date_btn {
+    outline: none;
+    border: none;
+    height: 3em;
+    width: 3em;
+    border-radius: 5em;
+    font-size: 1rem;
+
+}
+
+.add_btn {
+    background-color: var(--green)
+}
+
 
 
 

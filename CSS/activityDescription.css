@@ -13,7 +13,7 @@
     line-height: 1.5;
     display: block;
     vertical-align: middle;
-
+    overflow-y: scroll;
 
 }
 
@@ -132,3 +132,19 @@ p {
 
 }
 
+.timeline_segments {
+    height: 90% !important;
+
+}
+
+.calendar_body {
+    overflow-y: auto;
+    height: auto;
+}
+
+.calendar_activity_row {
+    border: none;
+}
+
+
+.
