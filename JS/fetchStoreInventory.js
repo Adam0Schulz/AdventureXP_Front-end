@@ -1,19 +1,26 @@
-const url = "http://localhost:8080/candy";
+const url = "http://localhost:8080/candy/";
+
 
 const addCandyBtn = document.getElementById("addCandyBtn");
+const editCandyBtn = document.getElementById("addCandyBtn");
 const table = document.getElementById("table")
 
 addCandyBtn.addEventListener("click", loadAddPage)
+editCandyBtn.addEventListener("click", loadAddPage2)
 
 function loadAddPage() {
     window.location.href = "addCandy.html";
+}
+
+function loadAddPage2() {
+    window.location.href = "editCandy.html";
 }
 
 doFetchItems()
 
 function shopItems(evt, items) {
     // Declare all variables
-    var i, tabContent, tablinks;
+    let i, tabContent;
 
     // Get all elements with class="tabcontent" and hide them
     tabContent = document.getElementsByClassName("tabContent");
@@ -21,11 +28,6 @@ function shopItems(evt, items) {
         tabContent[i].style.display = "none";
     }
 
-   /* // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }*/
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(items).style.display = "block";
@@ -42,6 +44,7 @@ function fetchItems() {
 }
 
 function createTable(item) {
+
     let rowCount = table.rows.length
     let row = table.insertRow(rowCount)
 
@@ -50,4 +53,9 @@ function createTable(item) {
 
     let cell2 = row.insertCell(1)
     cell2.innerHTML = item.price
+
+    let cell3 = row.insertCell(2)
+    cell3.innerHTML = "<a href="+url + item.id+">edit</a>";
+
+
 }
