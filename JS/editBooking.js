@@ -1,6 +1,8 @@
-import {getAll} from "./Service/API_calls.js";
+import {getAll, update} from "./Service/API_calls.js";
 
-const activitySelectEdit =document.getElementById("activity")
+const editSave =document.getElementById("saveBookingEdit")
+const cancelBookingEdit = document.getElementById("cancelBookingEdit")
+const activitySelectEdit = document.getElementById("activity")
 const firstName = document.getElementById("firstName")
 const lastName = document.getElementById("lastName")
 const email = document.getElementById("e-mail")
@@ -38,9 +40,18 @@ async function getEdit()
     date.value = response.date
     startTime.value = response.startTime
     endTime.value = response.endTime
-    activitySelectEdit.value = response.activity.name
+    activitySelectEdit.innerText = response.activity.name
     console.log(activitySelectEdit)
 }
+editSave.addEventListener('click', () =>
+{
+
+  //  update(idEdit, , "bookings").then()
+})
+
+cancelBookingEdit.addEventListener("click", ()=> {
+    window.location.href = "booking.html?id=" + idEdit;
+})
 
 
 
