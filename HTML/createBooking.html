@@ -1,31 +1,33 @@
 <div class="background">
     <div class="blueDiv popup">
-
+        <form id="bookingForm" method="POST" action="" role="form">
         <h1>Create Booking</h1>
 
         <div class="twoButton">
-            <button class="btn small-btn saveButton" id="saveBooking"><img src="../img/icons/save-icon.png" alt="">Save</button>
+            <button class="btn small-btn saveButton" id="saveBooking" type="submit"><img src="../img/icons/save-icon.png" alt="">Save</button>
             <button class="btn small-btn cancelButton" id="cancelBooking"><img src="../img/icons/cancel-icon.png" alt="" >Cancel</button>
         </div>
 
+
+
         <div class="titleText" id="firstNameDiv">
             <h3>First name</h3>
-            <input type="text" name="firstName" id="firstName">
+            <input type="text" name="firstName" id="firstName" required/>
         </div>
 
         <div class="titleText" id="lastNameDiv">
             <h3>Last name</h3>
-            <input type="text" name="lastName" id="lastName">
+            <input type="text" name="lastName" id="lastName" required/>
         </div>
 
         <div class="titleText">
             <h3>Phone</h3>
-            <input type="text" name="phone" id="phone">
+            <input type="text" name="phone" id="phone" required/>
         </div>
 
         <div class="titleText" id="e-mailDiv">
             <h3>E-mail</h3>
-            <input type="text" name="e-mail" id="e-mail">
+            <input type="text" name="e-mail" id="e-mail" required/>
         </div>
 
         <div class="titleText" id="activityDiv">
@@ -36,12 +38,12 @@
 
         <div class="titleText" id="participantsDiv">
             <h3>No. of participants</h3>
-            <input type="text" name="participants" id="participants">
+            <input type="text" name="participants" id="participants" required/>
         </div>
 
         <div class="titleText" id="dateDiv">
             <h3>Date</h3>
-            <input type="date" id="date">
+            <input type="date" id="date" required/>
         </div>
 
         <div class="titleText" id="startTimeDiv">
@@ -74,6 +76,7 @@
                 <option>15:00</option>
             </select>
         </div>
+</form>
 
     </div>
 </div>
