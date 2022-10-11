@@ -1,0 +1,44 @@
+.popUpBox
+{
+    background-color: var(--light-blue);
+
+    position: absolute;
+    /*z-index: 5;*/
+    padding: 3rem;
+    min-width: 30rem;
+    min-height: 30rem;
+    width: 60vw;
+    /*width: 700px;*/
+    height: inherit;
+    display: block;
+    margin: 0;
+    border-radius: var(--Medium);
+
+}
+.twobutton{
+
+    padding: 20px;
+    display: flex;
+    width: 20rem;
+    margin-left: 320px;
+}
+
+#name{
+    margin-bottom: 20px;
+    height: 3.2em;
+}
+
+#price {
+    height: 3.2rem;
+    margin-bottom: -3%;
+}
+
+#saveButton{
+    background-color: var(--green);
+    margin-right: 20px;
+
+}
+
+#cancelButton {
+    background-color: var(--yellow);
+}

@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit candy</title>
-</head>
-<body>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../CSS/global.css"  media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/editCandy.css"  media="screen">
 
-</body>
-</html>
+    <title>Edit Candy</title>
+</head>
+<div class="background">
+    <div class="popUpBox">
+        <div class="titleText">
+
+            <h1 id="editCandy">Edit candy</h1>
+
+            <div class="twobutton">
+
+                <button id="saveButton" class="btn small-btn"><img src="../img/icons/save-icon.png" alt="">Save</button>
+                <button id="cancelButton" class="btn small-btn"><img src="../img/icons/cancel-icon.png" alt="" >Cancel</button>
+            </div>
+
+            <h3>Id</h3>
+
+            <textarea name="id" id="id" placeholder="id"></textarea>
+
+            <h3>Name</h3>
+
+            <textarea name="name" id="name" placeholder="Name"></textarea>
+
+        </div>
+
+        <h3 >Price</h3>
+
+        <textarea id="price" name="price" placeholder="Price"></textarea>
+
+
+
+    </div>
+</div>
+<script rel="stylesheet" src="../JS/editCandy.js" defer></script>
