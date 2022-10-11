@@ -13,7 +13,7 @@
     line-height: 1.5;
     display: block;
     vertical-align: middle;
-
+    overflow-y: scroll;
 
 }
 
@@ -34,9 +34,7 @@
 #descriptionText{
     text-align: center;
     margin-top: 20%;
-    margin-bottom: 30%;
-
-    margin-right: 20px;
+    margin-bottom: 5em;
 }
 
 p {
@@ -117,3 +115,19 @@ p {
 
 }
 
+.timeline_segments {
+    height: 90% !important;
+
+}
+
+.calendar_body {
+    overflow-y: auto;
+    height: auto;
+}
+
+.calendar_activity_row {
+    border: none;
+}
+
+
+.

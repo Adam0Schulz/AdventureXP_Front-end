@@ -4,7 +4,7 @@ import {getActivityBookingsByDate, getAll} from './Service/API_calls.js'
 const bookingBlockBackgroundColors = ['blue', 'green']
 const calendarBody = document.querySelector('#calendar_body')
 let timelineSegments = document.querySelector('#timeline_segments')
-const calendarDate = document.getElementById("date")
+const calendarDate = document.querySelector("#calendar_date_input")
 const forwardBtn = document.querySelector('#nextDayBtn')
 const backwardBtn = document.querySelector('#previousDayBtn')
 const numOfHours = 8
@@ -78,9 +78,9 @@ function populateCalendar(date) {
         activityData.forEach(activity => {
 
             let activityRow = document.createElement('div')
-            activityRow.className = "activity_row"
+            activityRow.className = "calendar_activity_row"
             let activityColumn = document.createElement('div')
-            activityColumn.className = "activity_column"
+            activityColumn.className = "calendar_activity_column"
             let activityHeading = document.createElement('h3')
 
             activityHeading.innerText = activity.name
@@ -88,7 +88,7 @@ function populateCalendar(date) {
             activityRow.appendChild(activityColumn).append(activityHeading)
 
             let rowTimeline = document.createElement('div')
-            rowTimeline.className = "row-timeline"
+            rowTimeline.className = "calendar_row-timeline"
             rowTimeline.style.minWidth = timelineSegments.offsetWidth + 'px'
             rowTimeline.setAttribute('width', timelineSegments.offsetWidth + '')
             console.log(activity.name)
@@ -100,7 +100,7 @@ function populateCalendar(date) {
                     let a = document.createElement('a')
                     a.href = "booking.html?id="+booking.id
                     let bookingBlock = document.createElement('div')
-                    bookingBlock.className = "booking_block"
+                    bookingBlock.className = "calendar_booking_block"
 
 
                     const oneTimeSegment = (100 / (numOfHours * 2))
