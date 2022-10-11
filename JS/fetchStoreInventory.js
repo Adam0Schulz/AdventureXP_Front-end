@@ -2,18 +2,17 @@ const url = "http://localhost:8080/candy/";
 
 
 const addCandyBtn = document.getElementById("addCandyBtn");
-const editCandyBtn = document.getElementById("addCandyBtn");
 const table = document.getElementById("table")
 
+
 addCandyBtn.addEventListener("click", loadAddPage)
-editCandyBtn.addEventListener("click", loadAddPage2)
+
+let itemClicked = 0;
+
+
 
 function loadAddPage() {
     window.location.href = "addCandy.html";
-}
-
-function loadAddPage2() {
-    window.location.href = "editCandy.html";
 }
 
 doFetchItems()
@@ -55,7 +54,13 @@ function createTable(item) {
     cell2.innerHTML = item.price
 
     let cell3 = row.insertCell(2)
-    cell3.innerHTML = "<a href="+url + item.id+">edit</a>";
+    let btn = document.createElement("button")
+    btn.id = "editButton"
+    btn.innerText = "edit"
+    btn.addEventListener("click", e => {
+        itemClicked = item;
+        $('#cont').load("editCandy.html")
 
-
+    })
+    cell3.append(btn)
 }
