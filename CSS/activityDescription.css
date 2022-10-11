@@ -1,9 +1,9 @@
 
 #bluebox {
     border-radius: 25px; /* rounds the edges*/
-    background: #bddeff;
+    background: var(--light-blue);
     width: 50%;
-    padding: 20px;
+    padding: 3rem;
     height: 550px;
     margin: auto;
     text-align: center;
@@ -13,13 +13,12 @@
     line-height: 1.5;
     display: block;
     vertical-align: middle;
-
+    overflow-y: scroll;
 
 }
 
-.activityTitle{
+#activityTitle{
     margin-top: 30px;
-    margin-left: 20px;
     float: left;
 }
 
@@ -35,30 +34,17 @@
 #descriptionText{
     text-align: center;
     margin-top: 20%;
-    margin-bottom: 30%;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-bottom: 5em;
 }
 
 p {
     font-size: large;
+    font-weight: bold;
     text-align: justify;
 }
 
 #topBar{
     align-items: flex-start;
-
-}
-
-.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width:  250px;
-    height: 150px;
-
 
 }
 
@@ -80,7 +66,6 @@ p {
     border-radius: 1rem;
     font-style: italic;
     margin-right: 5px;
-    width: 110px;
     height: 38px;
 
 
@@ -105,7 +90,6 @@ p {
     border-radius: 1rem;
     font-style: italic;
     margin-right: 5px;
-    width: 110px;
     height: 38px;
 }
 
@@ -127,8 +111,23 @@ p {
     border-radius: 1rem;
     font-style: italic;
     margin-right: 5px;
-    width: 110px;
     height: 38px;
 
 }
 
+.timeline_segments {
+    height: 90% !important;
+
+}
+
+.calendar_body {
+    overflow-y: auto;
+    height: auto;
+}
+
+.calendar_activity_row {
+    border: none;
+}
+
+
+.
