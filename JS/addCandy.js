@@ -8,12 +8,12 @@ console.log(nameTag)
 
 
 let name = ""
-let type = ""
+let price = ""
 nameTag.addEventListener("change", (event) => {
     name = event.target.value;
 });
 typeTag.addEventListener("change", (event) => {
-    type = event.target.value;
+    price = event.target.value;
 });
 
 //make a cancle buttton cancle and go back to the main page
@@ -32,7 +32,7 @@ cancelButton.addEventListener("click", () => {
 //fetch url and save as post request
 saveButton.addEventListener("click", () => {
         //name and type should not be empty
-        if (name === "" || type === "" ) {
+        if (name === "" || price === "" ) {
             alert("Please fill out all fields");
             return;
         }
@@ -48,7 +48,7 @@ saveButton.addEventListener("click", () => {
 
         //make shore is not save type with only numbers
 
-        if (name.match(/^[0-9]+$/)) {
+        if (!price.match(/^[0-9]+$/)) {
             alert("Number is not valid");
             return;
         }
@@ -62,7 +62,7 @@ saveButton.addEventListener("click", () => {
             },
             body: JSON.stringify({
                 name: name,
-                description: type,
+                price: price,
             }),
         })
             .then((response) => response.json())
