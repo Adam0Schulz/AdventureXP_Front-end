@@ -5,7 +5,7 @@
     padding: 3rem;
     height: 550px;
     margin: auto;
-    text-align: center;
+    /*text-align: center;*/
     position: absolute;
     left: 25%;
     top: 25%;
@@ -20,6 +20,7 @@
 #bookingTitle{
     margin-top: 30px;
     float: left;
+    font-size: 20px;
 }
 
 
@@ -42,7 +43,7 @@
     overflow-y: scroll;
     padding-right: 1rem;
     scroll-behavior: smooth;
-    display: grid;
+    /*display: grid;*/
     grid-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
@@ -51,15 +52,18 @@
 
 }
 
-p {
-    /*font-size: large;*/
-    /*font-weight: bold;*/
-    text-align: justify;
-    margin-bottom: 3%;
-    font-weight: lighter;
-    font-size: 20px;
-    margin-left: -3%;
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
 }
+
+.grid-item {
+    padding: 20px;
+
+}
+
+
 
 #topBar{
     align-items: flex-start;
@@ -146,85 +150,25 @@ p {
 
 .bookings_cont{
     margin-top: 20%;
-    /*display: flex;*/
     flex-wrap: wrap;
 
 }
 
-
-.rightside{
-    margin-top: -74%;
-    margin-left: 300px;
-    /*margin-left: 0px;*/
-}
-
-.rightside h3 {
-    margin-bottom: 4%;
-}
-
-.customer{
+#customer{
+    margin-top: 5%;
     font-size: 30px;
-    margin-top: 3%;
-    margin-left: -9%;
-    margin-bottom: 3%;
 }
 
-.customer p {
-    font-size: large;
-    text-align: justify;
-    margin-bottom: 3%;
-    font-weight: lighter;
-    font-size: 20px;
-    margin-left: 50px;
-}
-.customer h3 {
-    margin-left: 50px;
-    margin-bottom: 3%;
+#participants, #activity, #date, #phone {
+    margin-top: -5%;
+    margin-left: -5%;
 }
 
-.rightside p {
-    font-size: large;
-    /*font-weight: bold;*/
-    text-align: justify;
-    margin-bottom: 3%;
-    font-weight: lighter;
-    font-size: 20px;
-    /*margin-left: 50px;*/
-}
-
-#email {
-    margin-bottom: 3%;
-}
-
-
-
-.moveleft{
-    margin-left: 300px;
-    margin-top: -34%;
-}
 h3{
     font-size: 20px;
 }
 
-.moveleft p {
-    font-size: large;
-    /*font-weight: bold;*/
-    text-align: justify;
-    /*margin-bottom: 3%;*/
-    font-weight: lighter;
+p{
     font-size: 20px;
-    margin-bottom: 10%;
 }
 
-.moveleft h3 {
-    margin-bottom: 3%;
-}
-
-#phone {
-    margin-left: -7%;
-    margin-top: -3%;
-}
-
-/*.rightside h3 {*/
-/*    margin-bottom: -10%;*/
-/*}*/
