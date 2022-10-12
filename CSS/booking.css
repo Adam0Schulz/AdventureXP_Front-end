@@ -52,19 +52,6 @@
 
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 10px;
-}
-
-.grid-item {
-    padding: 20px;
-
-}
-
-
-
 #topBar{
     align-items: flex-start;
     margin-top: -5%;
@@ -151,6 +138,16 @@
 .bookings_cont{
     margin-top: 20%;
     flex-wrap: wrap;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    padding: 20px;
 
 }
 
