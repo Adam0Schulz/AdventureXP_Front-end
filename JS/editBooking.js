@@ -17,6 +17,8 @@ const urlEdit = parameterEdit.get("id")
 const idEdit = urlEdit;
 const url = "http://localhost:8080/bookings/" + idEdit
 
+let newBooking = {}
+
 getAll("activities").then(data => {
     console.log(data)
     data.forEach(activity => {
@@ -25,28 +27,52 @@ getAll("activities").then(data => {
         option.innerText = activity.name
         activitySelectEdit.append(option)
     })
-})
+}).then(() => getEdit())
 
-getEdit()
+
+function selectOption(selectElem, thingToCompareTo, value){
+    for(let i = 0; i < selectElem.options.length; i++){
+
+        let compareThing = value ? selectElem.options[i].value : selectElem.options[i].innerText + ":00"
+
+        if(compareThing == thingToCompareTo) {
+            selectElem.options[i].setAttribute("selected", "selected")
+        }
+    }
+}
 
 async function getEdit()
 {
     const response = await fetch(url).then(response => response.json());
+    newBooking = response
     firstName.value = response.customer.firstname
     lastName.value = response.customer.lastname
     email.value = response.customer.email
     phone.value = response.customer.phone
     participants.value = response.numberOfParticipants
     date.value = response.date
-    startTime.value = response.startTime
-    endTime.value = response.endTime
-    activitySelectEdit.innerText = response.activity.name
-    console.log(activitySelectEdit)
+    selectOption(startTime, response.startTime, false)
+    selectOption(endTime, response.endTime, false)
+    selectOption(activitySelectEdit, response.activity.id, true)
 }
+
+
+
 editSave.addEventListener('click', () =>
 {
 
-  //  update(idEdit, , "bookings").then()
+    newBooking.customer.firstname = firstName.value
+    newBooking.customer.lastname = lastName.value
+    newBooking.customer.phone = phone.value
+    newBooking.customer.email = email.value
+    newBooking.date = date.value
+    newBooking.startTime = startTime.value
+    newBooking.endTime = endTime.value
+    newBooking.numberOfParticipants = participants.value
+    console.log("this is newBooking", newBooking)
+    update(newBooking.customer.id, newBooking.customer, "customers").then(() =>
+        update(idEdit, newBooking , "bookings").then(window.location.href = "booking.html?id=" + idEdit)
+    )
 })
 
 cancelBookingEdit.addEventListener("click", ()=> {

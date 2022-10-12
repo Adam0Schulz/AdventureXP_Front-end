@@ -52,8 +52,10 @@ saveBooking.addEventListener('click', () =>
     newBooking.startTime = startTime.value
     newBooking.endTime = endTime.value
     newBooking.numberOfParticipants = participants.value
-    newBooking.customer = newCustomer
-    createWithParam(newBooking, "bookings", ["activityId", activityId]).then(window.location.replace("bookings.html"))
+    //newBooking.customer = newCustomer
+    create(newCustomer, "customers").then(response => newBooking.customer = response).then(() =>
+        createWithParam(newBooking, "bookings", ["activityId", activityId]).then(() => window.location.href = "bookings.html")
+    )
 })
 
 //cancelBooking button and go back to the booking page
