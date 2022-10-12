@@ -9,7 +9,10 @@ let timelineSegments = document.querySelector('#timeline_segments')
 const calendarDate = document.querySelector("#calendar_date_input")
 const forwardBtn = document.querySelector('#nextDayBtn')
 const backwardBtn = document.querySelector('#previousDayBtn')
-const numOfHours = 8
+
+const numOfHours = 12
+const openingHour = 10
+
 let date = new Date()
 
 
@@ -21,7 +24,7 @@ function createTimeline() {
     timeline.id = 'timeline_segments'
     calendarBody.append(timeline)
     timelineSegments = document.querySelector('#timeline_segments')
-    let hour = 7
+    let hour = openingHour
     for (let i = 0; i <= numOfHours * 2; i++) {
         const timeSegment = document.createElement('div')
         const wholeHour = i % 2 === 0
@@ -126,7 +129,7 @@ function populateCalendar(date) {
                     bookingBlock.className = "calendar_booking_block"
 
 
-                    const oneTimeSegment = (100 / (numOfHours * 2))
+                    const oneTimeSegment = (100 / ((numOfHours * 2)))
 
                     const startHour = booking.startTime.split(':', 3)[0]
                     const startMinute = booking.startTime.split( ':', 3)[1]
@@ -136,8 +139,8 @@ function populateCalendar(date) {
                     const endMinute = booking.startTime.split(':', 3)[1]
                     const wholeEndHour = startMinute === "00"
 
-                    bookingBlock.style.left = ((oneTimeSegment * 2) * (startHour - 7)) + (wholeStartHour ? 0 : oneTimeSegment) + '%'
-                    bookingBlock.style.right = 100 - (((oneTimeSegment * 2) * (endHour - 7)) + (wholeEndHour ? 0 : oneTimeSegment)) + '%'
+                    bookingBlock.style.left = (((oneTimeSegment * 2) * (startHour - openingHour)) + (wholeStartHour ? 0 : oneTimeSegment)) + '%'
+                    bookingBlock.style.right = 100 - (((oneTimeSegment * 2) * (endHour - openingHour)) + (wholeEndHour ? 0 : oneTimeSegment)) + '%'
 
                     let bookingHeading = document.createElement('h4')
                     bookingHeading.innerText = "#" + booking.id + " - " + booking.customer.firstname + " " + booking.customer.lastname
