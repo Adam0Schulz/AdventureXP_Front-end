@@ -1,19 +1,27 @@
 //add save button with event listener
+import {getAll} from "./Service/API_calls.js";
+
 const saveButton = document.getElementById("saveButton");
 const url= "http://localhost:8080/activities";
 const nameTag = document.getElementById("title");
 const typeTag = document.getElementById("description");
+const instructorSelect = document.getElementById("instructor")
+
 
 console.log(nameTag)
 
 
 let name = ""
 let type = ""
+let instructor = {"id" : ""}
 nameTag.addEventListener("change", (event) => {
     name = event.target.value;
 });
 typeTag.addEventListener("change", (event) => {
     type = event.target.value;
+});
+instructorSelect.addEventListener("change", (event) => {
+    instructor.id = event.target.value;
 });
 
 //make a cancel buttton cancle and go back to the main page
@@ -74,6 +82,7 @@ saveButton.addEventListener("click", () => {
         body: JSON.stringify({
             name: name,
             description: type,
+            instructor: instructor
         }),
     })
         .then((response) => response.json())
@@ -95,6 +104,18 @@ saveButton.addEventListener("click", () => {
         )
 }
 );
+
+
+//dropdown list fetch data from the instructor table
+getAll("instructors").then(data => {
+    console.log(data)
+    data.forEach(instructor => {
+        const option = document.createElement("option")
+        option.setAttribute("value", instructor.id)
+        option.innerText = instructor.firstName
+        instructorSelect.append(option)
+    })
+})
 
 
 
