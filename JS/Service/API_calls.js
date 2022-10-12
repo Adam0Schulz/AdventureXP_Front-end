@@ -52,7 +52,7 @@ export async function create(body,resource){
     })
         .then(response => {
             if(response.status===200){
-                return  "successfully created item"
+                return  response.json()
             }
             return response.status
         })

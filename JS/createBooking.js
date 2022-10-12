@@ -6,7 +6,7 @@ const activitySelect =document.getElementById("activity")
 const firstName = document.getElementById("firstName")
 const lastName = document.getElementById("lastName")
 const email = document.getElementById("e-mail")
-const phone = document.getElementById("phone")
+const phone = document.getElementById("phoneE")
 const date = document.getElementById("date")
 const startTime = document.getElementById("startTime")
 const endTime = document.getElementById("endTime")
@@ -66,8 +66,9 @@ saveBooking.addEventListener('click', () =>
     newBooking.startTime = startTime.value
     newBooking.endTime = endTime.value
     newBooking.numberOfParticipants = participants.value
-    newBooking.customer = newCustomer
-    createWithParam(newBooking, "bookings", ["activityId", activityId]).then(window.location.replace(window.location.href))
+    create(newCustomer, "customers").then(response => newBooking.customer = response).then(() =>
+        createWithParam(newBooking, "bookings", ["activityId", activityId]).then(() => window.location.href = "bookings.html")
+    )
 })
 
 //cancelBooking button and go back to the booking page
