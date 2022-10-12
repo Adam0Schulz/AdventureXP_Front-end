@@ -39,7 +39,21 @@ getAll("activities").then(data => {
         option.innerText = activity.name
         activitySelect.append(option)
     })
+}).then(() => {
+const activityPageId = new URLSearchParams(window.location.search).get('id')
+    if(activityPageId != null) {
+        for(let i = 0; i <= activitySelect.options.length; i++) {
+            let option =  activitySelect.options[i]
+            if (option.value == activityPageId) {
+                option.setAttribute('selected', 'selected')
+            } else {
+                option.setAttribute('disabled', 'disabled')
+            }
+        }
+    }
 })
+
+
 
 saveBooking.addEventListener('click', () =>
 {
@@ -52,7 +66,6 @@ saveBooking.addEventListener('click', () =>
     newBooking.startTime = startTime.value
     newBooking.endTime = endTime.value
     newBooking.numberOfParticipants = participants.value
-    //newBooking.customer = newCustomer
     create(newCustomer, "customers").then(response => newBooking.customer = response).then(() =>
         createWithParam(newBooking, "bookings", ["activityId", activityId]).then(() => window.location.href = "bookings.html")
     )
@@ -60,6 +73,6 @@ saveBooking.addEventListener('click', () =>
 
 //cancelBooking button and go back to the booking page
 cancelBooking.addEventListener("click", ()=> {
-    window.location.href = "bookings.html";
+    window.location.href = window.location.href;
 })
 

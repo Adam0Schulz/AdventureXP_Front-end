@@ -13,10 +13,12 @@
     <link rel="stylesheet" type="text/css" href="../CSS/activityDescription.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../CSS/DeleteActivityPop-up.css">
     <link rel="stylesheet" type="text/css" href="../CSS/addNewActivity.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/createBooking.css">
 
     <script src="../JS/DeleteActivityPop-up.js" defer></script>
-    <script src="../JS/fetchActivityDescriptions.js" defer></script>
-    <script src="../JS/editActivityPop-up.js" defer></script>
+    <script src="../JS/fetchActivityDescriptions.js" type="module" defer></script>
+    <script src="../JS/editActivityPop-up.js"  defer></script>
+    <script src="../JS/createBookingPop-up.js" type="module" defer></script>
     <title>Description</title>
 </head>
 <body>
@@ -28,23 +30,41 @@
 
     <div id="topBar">
 
-    <button class="btn small-btn deleteButton" id="deleteActivityBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
-    <button class="btn small-btn editButton" id="editActivityBtn"> <img src="../img/icons/edit-icon.png"> Edit </button>
+        <button class="btn small-btn deleteButton" id="deleteActivityBtn" > <img src="../img/icons/cancel-icon.png"> Delete </button>
+        <button class="btn small-btn editButton" id="editActivityBtn"> <img src="../img/icons/edit-icon.png"> Edit </button>
         <form action="activities.html">
-    <button class="btn small-btn backButton" > <img src="../img/icons/back-icon.png">  Back </button>
+            <button class="btn small-btn backButton" > <img src="../img/icons/back-icon.png">  Back </button>
         </form>
 
         <div id="activityTitle">
-    <h1 class="activityTitle">Title</h1>
+            <h1 class="activityTitle">Title</h1>
         </div>
     </div>
 
 
     <div id="descriptionText">
-    <h2 id="descriptionTitle">Description</h2>
-    <p class="descriptionText"></p>
+        <h2 id="descriptionTitle">Description</h2>
+        <p class="descriptionText"></p>
     </div>
 
+    <div class="header">
+        <h1>Bookings</h1>
+        <button class="btn small-btn add_btn" id="addBtn"><img src="../img/icons/add-icon.png" />new</button>
+    </div>
+    <div class="calendar_cont">
+        <div class="calendar_header">
+            <button class="btn calendar_date_btn" id="previousDayBtn"><</button>
+
+            <input type="date" name="date" id="calendar_date_input">
+
+            <button class="btn calendar_date_btn" id="nextDayBtn">></button>
+        </div>
+        <div class="calendar_body" id="calendar_body">
+            <div class="timeline_segments" id="timeline_segments">
+
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
