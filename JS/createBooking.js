@@ -2,7 +2,7 @@ import {getAll, create, createWithParam} from "./Service/API_calls.js";
 
 const saveBooking = document.getElementById("saveBooking")
 const cancelBooking = document.getElementById("cancelBooking")
-const activitySelect =document.getElementById("activity")
+const activitySelect = document.getElementById("activity")
 const firstName = document.getElementById("firstName")
 const lastName = document.getElementById("lastName")
 const email = document.getElementById("e-mail")
