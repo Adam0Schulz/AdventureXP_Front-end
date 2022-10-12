@@ -1,5 +1,8 @@
 //add save button with event listener
 const saveButton = document.getElementById("saveButton");
+const param = new URLSearchParams(window.location.search);
+const urlId = param.get("id");
+const id = urlId;
 const url= "http://localhost:8080/activities/"+id;
 const nameTag = document.getElementById("title");
 const typeTag = document.getElementById("description");

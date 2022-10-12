@@ -1,7 +1,7 @@
 
 #bluebox {
     border-radius: 25px; /* rounds the edges*/
-    background: #bddeff;
+    background: var(--light-blue);
     width: 50%;
     padding: 20px;
     height: 550px;
