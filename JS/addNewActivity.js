@@ -86,7 +86,6 @@ saveButton.addEventListener("click", () => {
 
             }else   {
 
-
                 alert("Activity successfully added");
                 window.location.href = "activities.html";
             }

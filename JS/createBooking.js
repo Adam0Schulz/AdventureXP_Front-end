@@ -55,6 +55,8 @@ getAll("activities").then(data => {
 
 
 
+
+
 saveBooking.addEventListener('submit', (event) =>
 {
 
@@ -69,9 +71,20 @@ saveBooking.addEventListener('submit', (event) =>
     newBooking.numberOfParticipants = participants.value
     newBooking.customer = newCustomer
     createWithParam("bookings", newBooking,["activityId", activityId])
+
     .then(data => {
-        console.log(data)
-        window.location.href = "index.html"
+            if (data.status === 400  || data.status === 402 || data.status=== null) {
+                //make a sound for success or failure
+
+                alert("Booking not added");
+
+            }else   {
+
+
+                alert("Booking successfully added");
+                window.location.href = "activities.html";
+            }
+
 
     }
     )
